@@ -1,0 +1,31 @@
+$dark-color: #4a4a4a;
+$header-background: #fefefe;
+$header-text: #ffffff;
+
+// AIRPLANE COLORS
+
+$serial: #55a9a3;
+$current: #d57268;
+$date: #83a352;
+$reg: #d3c267;
+$ops: #5e6888;
+$country: #b9c7bf;
+
+// INCIDENTS COLORS
+
+$incidents-even: #cccccc;
+$incidents-odd: #aaaaaa;
+
+.container {
+  width: 100%;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,400i,700');
+
+$font-base: 'Cabin', san-serif;
+
+html {
+	font-family: $font-base;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

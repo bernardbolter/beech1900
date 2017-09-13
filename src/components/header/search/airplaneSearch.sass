@@ -1,0 +1,146 @@
+@import '../../../variables.scss'
+
+.search
+  display: flex
+  flex-direction: row
+
+.search-column-one
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  margin: 0 10px 10px 0
+
+  p
+    color: $dark-color
+    font-size: 12px
+    font-style: italic
+    text-align: right
+    margin: 0
+    padding: 0 15px 5px
+    border-right: 1px solid $dark-color
+
+  label
+    text-align: right
+    padding: 0 15px 5px
+    border-right: 1px solid $dark-color
+
+    span
+      color: $dark-color
+      font-size: 12px
+      letter-spacing: 0.05em
+
+  input
+    margin-top: 5px
+    font-size: 14px
+    color: #666
+
+  input::placeholder
+    font-size: 10px
+    color: #bbbbbb
+    padding-left: 5px
+
+.search-column-two
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  margin: 0 10px 10px 0
+
+  p
+    color: $dark-color
+    font-size: 12px
+    font-style: italic
+    text-align: left
+    margin: 0
+    padding: 5px 0 0
+
+  label
+    color: $dark-color
+    font-size: 12px
+    letter-spacing: 0.05em
+    margin:  0
+    padding: 6.5px 0 0
+
+    input
+      width: 14px
+      height: 14px
+      margin: 0 3px 0 0
+      border: 1px solid $dark-color
+
+.search-column-three
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  margin: 0 10px 10px 0
+
+  p
+    color: $dark-color
+    font-size: 12px
+    font-style: italic
+    text-align: left
+    margin: 0
+    padding: 5px 0 0
+
+  label
+    color: $dark-color
+    font-size: 12px
+    letter-spacing: 0.05em
+    margin:  0
+    padding: 6.5px 0 0
+
+    input
+      width: 14px
+      height: 14px
+      margin: 0 3px 0 0
+      border: 1px solid $dark-color
+
+.search-column-four
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  margin: 0 10px 10px -50px
+
+  select
+    width: 150px
+    font-size: 12px
+    font-family: $font-base
+    color: $dark-color
+    height: 20px
+    margin-top: 5px
+
+.search-reset
+  width: 24px
+  height: 33px
+  position: absolute
+  top: 15px
+  right: 15px
+  cursor: pointer
+  opacity: 0.5
+  display: flex
+  flex-direction: column
+  align-items: center
+
+  p
+    font-size: 12px
+    opacity: .7
+    padding: 0
+    margin: 0
+
+#reset-svg
+  width: 20px
+  height: 20px
+
+#reset-svg:hover
+  animation: spin .8s linear infinite
+
+@-moz-keyframes spin
+  100%
+    -moz-transform: rotate(360deg)
+
+@-webkit-keyframes spin
+  100%
+    -webkit-transform: rotate(360deg)
+
+@keyframes spin
+  100%
+    -webkit-transform: rotate(360deg)
+    transform:rotate(360deg)
