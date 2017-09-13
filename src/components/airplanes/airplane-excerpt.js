@@ -1,5 +1,4 @@
 import React from 'react';
-import { action, observable, autorun } from 'mobx';
 import { observer } from 'mobx-react';
 import { Link } from 'react-router-dom';
 
@@ -8,7 +7,7 @@ export default class AirplaneExcerpt extends React.Component {
 
   render() {
     return (
-      <div className={parseInt(this.props.id) & 1 ? 'airplane-excerpt excerpt-odd' : 'airplane-excerpt excerpt-even'}>
+      <div className={parseInt(this.props.id, 10) & 1 ? 'airplane-excerpt excerpt-odd' : 'airplane-excerpt excerpt-even'}>
         <Link to={`/airplanes/${this.props.serial}`}>
           <div className="airplane-serial">
             <p>{this.props.serial}</p>
@@ -27,6 +26,7 @@ export default class AirplaneExcerpt extends React.Component {
           </div>
           <div className="airplane-country">
             <p>{this.displayCountries()}</p>
+            <img src={this.displayFlag()} alt=""/>
           </div>
         </Link>
       </div>
@@ -39,6 +39,25 @@ export default class AirplaneExcerpt extends React.Component {
       return noCountry;
     } else {
       return this.props.latestCountry
+    }
+  }
+
+  displayFlag() {
+    let countryName = '';
+    let countryUnder = '';
+    let countryAll = '';
+    if (this.props.latestCountry.charAt(0) === `(`) {
+      countryName = this.props.latestCountry.slice(1, -1);
+    } else {
+      countryName = this.props.latestCountry;
+    }
+    countryUnder = countryName.split(' ').join('_');
+
+    countryAll = `${process.env.PUBLIC_URL}/flags/${countryUnder}.png`;
+    if (countryUnder === '?') {
+      return null;
+    } else {
+      return countryAll;
     }
   }
 

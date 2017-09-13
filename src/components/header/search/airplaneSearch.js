@@ -124,6 +124,10 @@ export default class AirplaneSearch extends React.Component {
       this.props.store.newerChecked = false;
       this.props.store.olderChecked = true;
       break;
+    default:
+      this.props.store.newerChecked = true;
+      this.props.store.olderChecked = false;
+      break;
     }
   }
 
@@ -156,23 +160,27 @@ export default class AirplaneSearch extends React.Component {
       case 'destroyed':
         this.props.store.destroyedChecked = !this.props.store.destroyedChecked;
       break
+      default:
+
     }
   }
 
   getCountryDropdown = () => {
     const countryList = [];
     this.props.store.airplaneData.map( air => {
-      if (air.latestCountry.charAt(0) === `\(`) {
+      if (air.latestCountry.charAt(0) === `(`) {
         var noCountry = air.latestCountry.slice(1, -1);
         countryList.push(noCountry);
+        return null;
       } else if (air.latestCountry === '?') {
-        null
+        return null;
       } else {
         countryList.push(air.latestCountry);
+        return null;
       }
     });
     const uniqCountries = countryList.filter( function( item, index, inputArray ) {
-        return inputArray.indexOf(item) == index;
+        return inputArray.indexOf(item) === index;
     });
     uniqCountries.sort();
 
@@ -182,17 +190,19 @@ export default class AirplaneSearch extends React.Component {
   getOperatorDropdown = () => {
     const operatorList = [];
     this.props.store.airplaneData.map( ops => {
-      if (ops.latestOperator.charAt(0) === `\(`) {
+      if (ops.latestOperator.charAt(0) === `(`) {
         var noOperator = ops.latestOperator.slice(1, -1);
         operatorList.push(noOperator);
+        return null;
       } else if (ops.latestOperator === "" || "?") {
-        null
+        return null;
       } else {
         operatorList.push(ops.latestOperator);
+        return null;
       }
     });
     const uniqOperators = operatorList.filter( function( item, index, inputArray ) {
-      return inputArray.indexOf(item) == index;
+      return inputArray.indexOf(item) === index;
     });
     uniqOperators.sort();
 

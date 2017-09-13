@@ -79,6 +79,7 @@ export default class AirplaneSearch extends React.Component {
       this.props.store.incidentsNewerChecked = false;
       this.props.store.incidentsOlderChecked = true;
       break;
+    default:
     }
   }
 
@@ -89,17 +90,17 @@ export default class AirplaneSearch extends React.Component {
   getIncidentTypeDropdown = () => {
     const incidentTypeList = [];
     this.props.store.incidentsData.map(incident => {
-      // incidentTypeList.push(incident.type);
       if (incident.type === "No data") {
-        null
+        return null;
       } else if (incident.type === "?") {
-        null
+        return null;
       } else {
         incidentTypeList.push(incident.type);
+        return null;
       }
     });
     const uniqIncidentsType = incidentTypeList.filter( function( item, index, inputArray ) {
-      return inputArray.indexOf(item) == index;
+      return inputArray.indexOf(item) === index;
     });
     uniqIncidentsType.sort();
 

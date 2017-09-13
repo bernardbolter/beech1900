@@ -2,18 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import 'normalize.css';
-import './variables.scss';
 
 import { storeData } from './store';
 
-import { createHistory } from 'history';
-
 import createBrowserHistory from 'history/createBrowserHistory';
 import { Provider } from 'mobx-react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { RouterStore, syncHistoryWithStore } from 'mobx-react-router';
-
-import Header from './components/header/header';
+import { Router, Route } from 'react-router-dom';
+import { RouterStore } from 'mobx-react-router';
 
 import Airplanes from './components/airplanes/airplanes';
 import AirplaneSingle from './components/airplanes/airplane-single';

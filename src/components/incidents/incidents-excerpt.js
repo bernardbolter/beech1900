@@ -1,18 +1,14 @@
 import React from 'react';
-import { action, observable, autorun } from 'mobx';
 import { observer } from 'mobx-react';
 
 import './incidents-excerpt.sass';
 
 @observer
 export default class IncidentExcerpt extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (
-      <div className={parseInt(this.props.id) & 1 ? 'incident-excerpt incident-odd' : 'incident-excerpt incident-even'}>
+      <div className={parseInt(this.props.id, 10) & 1 ? 'incident-excerpt incident-odd' : 'incident-excerpt incident-even'}>
         <p className="incident-serial">{this.props.date}</p>
         <p className="incident-serial">{this.props.serial}</p>
         <p className="incident-registration">{this.props.registration}</p>

@@ -1,5 +1,4 @@
 import React from 'react';
-import { action, observable, autorun } from 'mobx';
 import { observer, inject} from 'mobx-react';
 import { Link } from 'react-router-dom';
 
@@ -25,7 +24,6 @@ export default class AirplaneSingle extends React.Component {
   }
 
   render() {
-    console.log(this.state.singleData);
     return (
       <section>
       <Header match={this.props.match} />
@@ -96,7 +94,7 @@ export default class AirplaneSingle extends React.Component {
         const op = `this.state.singleData.event${i}Operator`;
         const comment = `this.state.singleData.event${i}Comment`;
         let evenOdd = ''
-        if (i%2 == 0) {
+        if (i%2 === 0) {
           evenOdd = 'event-container even';
         } else {
           evenOdd = 'event-container odd';
@@ -115,13 +113,11 @@ export default class AirplaneSingle extends React.Component {
       let filteredIncidents = [];
       incidentArray.map(incident => {
         let anIncident = this.props.store.incidentsData.slice().filter(function(obj) {
-          return obj.id == incident;
+          return obj.id === incident;
         });
         filteredIncidents.push(anIncident[0]);
+        return null;
       });
-      console.log(this.props.store.incidentsData);
-      console.log(incidentArray);
-      console.log(filteredIncidents);
 
       return (
         <div>
@@ -138,7 +134,7 @@ export default class AirplaneSingle extends React.Component {
   }
 
   displayCountries = () => {
-    if (this.state.singleData.latestCountry.charAt(0) === `\(`) {
+    if (this.state.singleData.latestCountry.charAt(0) === `(`) {
       var noCountry = this.state.singleData.latestCountry.slice(1, -1);
       return noCountry;
     } else {
@@ -147,7 +143,7 @@ export default class AirplaneSingle extends React.Component {
   }
 
   displayOperator = () => {
-    if (this.state.singleData.latestOperator.charAt(0) === `\(`) {
+    if (this.state.singleData.latestOperator.charAt(0) === `(`) {
       var noOperate = this.state.singleData.latestOperator.slice(1, -1);
       return noOperate;
     } else {

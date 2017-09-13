@@ -1,6 +1,4 @@
 import { action, observable, computed } from 'mobx';
-import { filter } from 'lodash';
-import axios from 'axios';
 
 import airplanes from './data/airplanes.json';
 import incidents from './data/incidents.json';
@@ -91,7 +89,7 @@ class Store {
 
     airplaneStatus = airplaneOperating.concat(airplaneOperatingNonCurrent, airplaneNonFlying, airplanePartedOut, airplaneDestroyed);
 
-    if (airplaneStatus.length == 0) {
+    if (airplaneStatus.length === 0) {
       airplaneStatus = airplaneFiltered;
     }
 
@@ -115,10 +113,10 @@ class Store {
     airplaneDoubles = airplaneCountry.concat(airplaneCountry, airplaneOperator);
 
     airplaneDrop = airplaneDoubles.filter( function( item, index, inputArray ) {
-        return inputArray.indexOf(item) == index;
+        return inputArray.indexOf(item) === index;
     });
 
-    if (airplaneDrop.length == 0) {
+    if (airplaneDrop.length === 0) {
       airplaneDrop = airplaneStatus;
     }
 
@@ -143,13 +141,13 @@ class Store {
 
     airplaneType = airplaneUA.concat(airplaneUB, airplaneUC, airplaneUE);
 
-    if (airplaneType.length == 0) {
+    if (airplaneType.length === 0) {
       airplaneType = airplaneDrop;
     }
 
     // SORT LIST BEFORE RETURNING
 
-    if (this.newerChecked == true) {
+    if (this.newerChecked === true) {
       airplaneSorted = airplaneType.reverse();
     } else {
       airplaneSorted = airplaneType;
@@ -164,7 +162,7 @@ class Store {
 
 
   @action getSingleAirplaneData(serial) {
-    const singlularDataObject = this.airplaneData.filter(x => x.serial == serial);
+    const singlularDataObject = this.airplaneData.filter(x => x.serial === serial);
     const singularDataArray = [];
     for (var key in singlularDataObject[0]) {
         if (singlularDataObject[0].hasOwnProperty(key)) {
@@ -186,8 +184,9 @@ class Store {
       incidentsFiltered.map( incident => {
         if (incident.fatalities > 0) {
           incidentsFatal.push(incident);
+          return null;
         } else {
-          null;
+          return null;
         }
       });
     } else {
@@ -202,7 +201,7 @@ class Store {
     }
 
 
-    if (this.incidentsNewerChecked == true) {
+    if (this.incidentsNewerChecked === true) {
       incidentsSorted = incidentsType.reverse();
     } else {
       incidentsSorted = incidentsType;
