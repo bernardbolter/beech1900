@@ -7,6 +7,9 @@ class Store {
   // Navigation Variables
   @observable location = '';
   @observable openNewsletter = false;
+  @observable toggleMenu = false;
+  @observable toggleSearch = false;
+  @observable searchButton = false;
 
   // Ariplane Data Variables
   @observable airplaneData = airplanes;

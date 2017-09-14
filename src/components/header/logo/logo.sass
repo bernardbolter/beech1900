@@ -1,14 +1,78 @@
 .logo
-  width: 350px
-  height: 120px
+  width: 100%
+  height: 130px
   margin: 10px 10px 0
-  background: url(./b1900-logo.png) bottom center no-repeat
+  background: url(./b1900-logo.png) center center no-repeat
+  background-size: 280px
   display: flex
-  flex-direction: row
+  flex-direction: column
   justify-content: space-between
+
+  @media screen and (min-width: 950px)
+    width: 350px
+    height: 120px
+    margin: 10px 10px 0
+    background: url(./b1900-logo.png) bottom center no-repeat
+    background-size: 350px
+    display: flex
+    flex-direction: row
+    justify-content: space-between
 
   p
     font-size: 24px
     font-weight: bold
     padding: 0
     margin: 0
+
+.logo_text_wrap
+  display: flex
+  justify-content: space-between
+  width: 100%
+
+.mobile_buttons
+  display: flex
+  justify-content: space-between
+  width: 100%
+  align-items: flex-end
+
+.search-menu
+  margin-bottom: 10px
+  cursor: pointer
+
+.search
+  display: flex
+  flex-direction: row
+  justify-content: flex-end
+
+.search-button
+  cursor: pointer
+  margin: 10px 0 0 0
+
+.search-svg
+  stroke: #555
+  transition: all 300ms ease-in-out
+
+.search-svg-on
+  transition: all 300ms ease-in-out
+
+#search-svg-left-line
+  transition: all 300ms ease-in-out
+  opacity: 0
+  stroke-width: 2
+
+#search-svg-right-line
+  transition: all 300ms ease-in-out
+  transform: translate(-10px, 10px)
+  stroke-width: 2
+
+.search-button-on
+  #search-svg-right-line
+    transition: all 300ms ease-in-out
+    transform: translate(0px, 0px)
+
+  #search-svg-left-line
+    transition: all 300ms ease-in-out
+    opacity: 1
+
+#search-svg-circle
+  stroke-width: 2
