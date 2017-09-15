@@ -216,4 +216,4 @@ class Store {
   }
 }
 
-export var storeData = new Store;
+export var storeData = new Store();

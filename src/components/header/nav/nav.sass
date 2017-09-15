@@ -2,23 +2,55 @@
 
 .nav
   position: absolute
-  top: 140px
-  width: 80px
-  margin: 5px 0  0 5px
+  top: 144px
+  width: 90%
+  margin: 0
+  padding: 20px 5%
   left: -100%
+  background: rgba(255,255,255,0.95)
+  transition: left 300ms ease-in-out
+  border-bottom: 1px solid #999
+  z-index: 100
 
-  @media screen and (min-width: 550px)
+  @media screen and (min-width: 650px)
     position: relative
     top: 0
     left: 0
+    width: 80px
+    margin: 5px 0  0 5px
+    border-bottom: none
+    background: none
+    padding: 0
 
   a
     color: $dark-color
     display: block
     text-align: left
     text-decoration: none
-    margin: 5px
-    font-size: 14px
+    font-size: 16px
+    margin: 10px 0
+
+    @media screen and (min-width: 650px)
+      margin: 5px
+      font-size: 14px
 
     &:hover
       text-decoration: underline
+
+.nav-open
+  left: 0
+  transition: left 300ms ease-in-out
+
+.nav_close_menu
+  position: absolute
+  right: 20px
+  top: 20px
+  font-size: 30px !important
+  color: #555
+  cursor: pointer
+
+  &:hover
+    text-decoration: none !important
+
+  @media screen and (min-width: 650px)
+    display: none !important

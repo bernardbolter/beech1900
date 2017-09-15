@@ -29,10 +29,13 @@ export default class Logo extends React.Component {
 
   _openMenu = () => {
     this.props.store.toggleMenu = !this.props.store.toggleMenu;
+    this.props.store.toggleSearch = false;
+    this.props.store.searchButton = false;
   }
 
   _openSearch = () => {
     this.props.store.toggleSearch = !this.props.store.toggleSearch;
     this.props.store.searchButton = !this.props.store.searchButton;
+    this.props.store.toggleMenu = false;
   }
 }

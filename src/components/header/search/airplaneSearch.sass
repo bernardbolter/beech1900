@@ -2,35 +2,71 @@
 
 .search
   position: absolute
-  top: 140px
+  top: 144px
   display: flex
   flex-direction: row
-  right: -100%
+  left: -100%
+  transition: left 300ms ease-in-out
+  overflow: hidden
+  width: 100%
+  background: rgba(255,255,255,0.95)
+  z-index: 100
+  flex-wrap: wrap
+  border-bottom: 1px solid #ccc
 
-  @media screen and (min-width: 550px)
+  @media screen and (min-width: 650px)
     position: relative
     top: 0
-    right: 0
+    left: 0
+    width: 950px
+    background: none
+    flex-wrap: nowrap
+    border-bottom: none
+
+
+.search-open
+  left: 0
+  transition: left 300ms ease-in-out
 
 .search-column-one
   display: flex
-  flex-direction: column
-  justify-content: flex-end
-  margin: 0 10px 10px 0
+  flex-direction: row
+  justify-content: flex-start
+  margin: 40px 10px 10px 20px
+  width: 100%
+  flex-wrap: wrap
+  @media screen and (min-width: 650px)
+    width: auto
+    margin: 0 15px 10px 0
+    padding-right: 0
+    flex-direction: column
+    justify-content: flex-end
 
   p
     color: $dark-color
     font-size: 12px
     font-style: italic
     text-align: right
-    margin: 0
-    padding: 0 15px 5px
+    margin: 0 20px 0 35px
+    padding: 0 10px 0 0
     border-right: 1px solid $dark-color
+
+    @media screen and (min-width: 650px)
+      margin: 0
+      padding: 0 15px 5px
+      border-right: 1px solid $dark-color
+      width: auto
 
   label
     text-align: right
-    padding: 0 15px 5px
-    border-right: 1px solid $dark-color
+    padding: 0
+    margin: 0 5px 0 0
+    border-right: none
+
+    @media screen and (min-width: 650px)
+      margin: 0
+      padding: 0 15px 5px
+      border-right: 1px solid $dark-color
 
     span
       color: $dark-color
@@ -47,11 +83,24 @@
     color: #bbbbbb
     padding-left: 5px
 
+.search-input
+  width: 90%
+  margin: 5px 5%
+  @media screen and (min-width: 650px)
+    width: auto
+    margin: 0
+
 .search-column-two
   display: flex
   flex-direction: column
   justify-content: flex-end
-  margin: 0 10px 10px 0
+  margin: 0
+  width: 35%
+  align-items: flex-end
+
+  @media screen and (min-width: 650px)
+    width: auto
+    margin: 0 10px 10px 0
 
   p
     color: $dark-color
@@ -78,7 +127,13 @@
   display: flex
   flex-direction: column
   justify-content: flex-end
-  margin: 0 10px 10px 0
+  margin: 0
+  width: 62%
+  margin: 0 0 0 3%
+
+  @media screen and (min-width: 650px)
+    width: auto
+    margin: 0 10px 10px 0
 
   p
     color: $dark-color
@@ -103,17 +158,26 @@
 
 .search-column-four
   display: flex
-  flex-direction: column
-  justify-content: flex-end
-  margin: 0 10px 10px -50px
+  flex-direction: row
+  justify-content: space-around
+  margin: 10px 0
+  width: 100%
+  @media screen and (min-width: 650px)
+    margin: 0 10px 10px -50px
+    flex-direction: column
+    justify-content: flex-end
+    width: auto
 
   select
-    width: 150px
+    width: 45vw
     font-size: 12px
     font-family: $font-base
     color: $dark-color
     height: 20px
     margin-top: 5px
+    @media screen and (min-width: 650px)
+      width: 150px
+
 
 .search-reset
   width: 24px

@@ -23,7 +23,7 @@ export default class AirplaneSearch extends React.Component {
 
   render() {
     return (
-      <div className="search">
+      <div className={this.props.store.toggleSearch ? 'search search-open' : 'search'}>
 
         <div className="search-column-one">
           <p>sort by</p>
