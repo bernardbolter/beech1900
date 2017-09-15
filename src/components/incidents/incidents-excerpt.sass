@@ -1,0 +1,46 @@
+@import '../../variables.scss'
+
+.incident-excerpt
+  width: 100%
+  display: flex
+  flex-direction: row
+  border-bottom: 1px solid #999999
+  padding: 20px 0
+  margin: 0
+
+  p
+    padding: 0
+    margin: 0
+
+.incident-odd
+  background: lighten($country, 20%)
+
+.incident-even
+  background: lighten($ops, 50%)
+
+.incident-left
+  width: 30%
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+
+  p
+    text-align: right
+    margin-right: 20px
+
+.incident-span
+  color: #999
+  font-size: 11px
+  display: block
+  padding-bottom: 4px
+
+.incident-right
+  width: 70%
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  padding: 0
+
+  p
+    text-align: left
+    margin-left: 20px

@@ -48,37 +48,24 @@ export default class AirplaneSingle extends React.Component {
         </div>
         <section className="airplane-single-bottom-container">
           <div className="airplane-single-bottom-left">
-            <p className="bot-info-title">Initial Operator</p>
-            <p className="bot-info-data">{this.state.singleData.initialOperator}</p>
-            <p className="bot-info-title">Initial Registration</p>
-            <p className="bot-info-data">{this.state.singleData.initialopReg}</p>
-            <p className="bot-info-title">Factory Date</p>
-            <p className="bot-info-data">{this.state.singleData.factoryDate}</p>
-            <p className="bot-info-title">Factory Registration</p>
-            <p className="bot-info-data">{this.state.singleData.factoryReg}</p>
-            <p className="bot-info-title">Factory Date</p>
-            <p className="bot-info-data">{this.state.singleData.factoryDate}</p>
-            <p className="bot-info-title">Latest Operator</p>
-            <p className="bot-info-data">{this.state.singleData.latestOperator}</p>
-            <p className="bot-info-title">Latest Owner</p>
-            <p className="bot-info-data">{this.state.singleData.latestOwner}</p>
-            <p className="bot-info-title">Latest Registration</p>
-            <p className="bot-info-data">{this.state.singleData.latestReg}</p>
-            <p className="bot-info-title">Latest Registration Date</p>
-            <p className="bot-info-data">{this.state.singleData.latestregDate}</p>
-            <p className="bot-info-title">Current Status</p>
-            <p className="bot-info-data">{this.state.singleData.currentStatus}</p>
-            <p className="bot-info-title">Current Status Date</p>
-            <p className="bot-info-data">{this.state.singleData.currentstatusDate}</p>
-            <p className="bot-info-title">Current Data Source</p>
-            <p className="bot-info-data">{this.state.singleData.dataSource}</p>
+            <div className="bot-info-left">
+              <p className="bot-info-title">Current Status Date</p>
+              <p className="bot-info-data">{this.state.singleData.currentstatusDate}</p>
+              <p className="bot-info-title">Current Data Source</p>
+              <p className="bot-info-data bot-info-line">{this.state.singleData.dataSource}</p>
+            </div>
+            <div className="bot-info-right">
+              <p className="bot-info-title">Initial Operator</p>
+              <p className="bot-info-data">{this.state.singleData.initialOperator}</p>
+              <p className="bot-info-title">Initial Registration</p>
+              <p className="bot-info-data">{this.state.singleData.initialopReg}</p>
+            </div>
           </div>
           <div className="airplane-single-bottom-right">
             <h1>Events</h1>
 
             {this.getEvents()}
 
-            {this.getIncidents()}
 
           </div>
         </section>
@@ -109,14 +96,15 @@ export default class AirplaneSingle extends React.Component {
     if (this.state.singleData.incidentHistory !== "") {
       const incidents = this.state.singleData.incidentHistory.toString();
       let incidentArray = incidents.split(";");
+      console.log(incidentArray);
 
       let filteredIncidents = [];
       incidentArray.map(incident => {
         let anIncident = this.props.store.incidentsData.slice().filter(function(obj) {
           return obj.id === incident;
         });
+        console.log(anIncident);
         filteredIncidents.push(anIncident[0]);
-        return null;
       });
 
       return (
