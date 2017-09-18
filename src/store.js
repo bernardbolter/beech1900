@@ -2,6 +2,7 @@ import { action, observable, computed } from 'mobx';
 
 import airplanes from './data/airplanes.json';
 import incidents from './data/incidents.json';
+import facts from './data/facts.json';
 
 class Store {
   // Navigation Variables
@@ -43,6 +44,9 @@ class Store {
   @observable incidentsNewerChecked = false;
   @observable incidentsOlderChecked = true;
   @observable incidentsFatalitiesChecked = false;
+
+  // Facts Data
+  @observable factsData = facts;
 
   @computed get filteredAirplanes() {
     const matchesFilter = new RegExp(this.airplaneFilter, 'i');
@@ -213,6 +217,10 @@ class Store {
     incidentsResults = incidentsSorted;
 
     return incidentsResults;
+  }
+
+  @computed get theFacts() {
+    
   }
 }
 

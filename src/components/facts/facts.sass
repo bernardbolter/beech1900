@@ -1,0 +1,70 @@
+.facts
+  width: 100%
+  margin: 0 auto 50px
+  max-width: 1000px
+
+  h1
+    font-size: 20px
+    color: #777
+    text-align: center
+    font-weight: 200
+    @media screen and (min-width: 650px)
+      text-align: left
+      font-size: 24px
+      color: #666
+      margin-left: 5%
+
+  h2
+    font-size: 18px
+    color: #777
+    text-align: center
+    font-weight: 200
+    width: 90%
+    margin: 30px 5%
+    @media screen and (min-width: 650px)
+      text-align: left
+      font-size: 24px
+      color: #666
+      margin-left: 5%
+
+.facts_info
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+  @media screen and (min-width: 650px)
+    flex-direction: row
+    justify-content: center
+    margin: 10px 0
+
+  p
+    width: 90%
+    margin: 10px 5%
+    color: #444
+    font-size: 14px
+    line-height: 1.5
+    text-indent: 15px
+    @media screen and (min-width: 650px)
+      width: 40%
+
+  img
+    width: 90%
+    margin: 10px 5%
+    @media screen and (min-width: 650px)
+      width: 55%
+      margin: 0 5% 0 0
+
+.info_reverse
+  @media screen and (min-width: 650px)
+    flex-direction: row-reverse
+  img
+    @media screen and (min-width: 650px)
+      margin: 0 0 0 5%
+
+.facts_excerpt_wrapper
+  display: flex
+  flex-direction: column
+  @media screen and (min-width: 650px)
+    flex-direction: row
+    flex-wrap: wrap
