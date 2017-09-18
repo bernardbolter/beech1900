@@ -181,7 +181,7 @@ class Store {
 
   @computed get filteredIncidents() {
     const matchesIncidentsFilter = new RegExp(this.incidentsFilter, 'i');
-    let incidentsFiltered = this.incidentsData.filter(incident => !this.incidentsFilter || matchesIncidentsFilter.test(incident.registration) || matchesIncidentsFilter.test(incident.airport));
+    let incidentsFiltered = this.incidentsData.filter(incident => !this.incidentsFilter || matchesIncidentsFilter.test(incident.registration) || matchesIncidentsFilter.test(incident.location) ||matchesIncidentsFilter.test(incident.operator) || matchesIncidentsFilter.test(incident.airport));
     let incidentsSorted = [];
     let incidentsType = [];
     let incidentsFatal = [];
@@ -220,7 +220,7 @@ class Store {
   }
 
   @computed get theFacts() {
-    
+
   }
 }
 

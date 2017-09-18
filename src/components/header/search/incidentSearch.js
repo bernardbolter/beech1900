@@ -21,7 +21,7 @@ export default class AirplaneSearch extends React.Component {
 
   render() {
     return (
-      <div className="incident-search">
+      <div className={this.props.store.toggleSearch ? 'incident-search incident-search-open' : 'incident-search'}>
 
         <div className="incident-column-one">
           <p>sort by</p>
@@ -34,7 +34,7 @@ export default class AirplaneSearch extends React.Component {
             <input type="checkbox" id="newer" value="newer" checked={this.props.store.incidentsNewerChecked} onChange={this.toggleSorting} />
           </label>
 
-          <input className="search-input filter" type="text" value={this.props.store.incidentsFilter} onChange={this.filterIncidents} />
+          <input className="search-input filter" placeholder="search location, airport, operator..." type="text" value={this.props.store.incidentsFilter} onChange={this.filterIncidents} />
         </div>
 
         <div className="incident-column-two">
@@ -113,6 +113,7 @@ export default class AirplaneSearch extends React.Component {
 
   searchReset = () => {
     this.props.store.incidentsFilter = '';
+    this.props.store.incidentsTypeValue = '';
     this.props.store.incidentsNewerChecked = false;
     this.props.store.incidentsOlderChecked = true;
     this.props.store.incidentsFatalitiesChecked = false;

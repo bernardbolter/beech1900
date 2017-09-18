@@ -14,12 +14,11 @@ import Nav from './nav/nav';
 export default class Header extends React.Component {
 
   render() {
-    console.log(this.props);
     return (
       <div className="header">
         <div className="nav-container">
-          <Nav />
-          <Logo />
+          <Nav match={this.props.match} />
+          <Logo match={this.props.match} />
         </div>
         {this.displaySearch()}
       </div>

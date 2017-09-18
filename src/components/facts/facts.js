@@ -24,7 +24,7 @@ render() {
             <img src={`${process.env.PUBLIC_URL}/factory2.jpg`} alt="View of the Beaach 1900 factory" />
           </div>
           <div className="facts_excerpt_wrapper">
-          <h2>List and info of all know operators who no longer fly the Beech 1900.</h2>
+          <h2>List and info of all known operators who no longer fly the Beech 1900.</h2>
             {this.props.store.factsData.slice().map( fact => (
                 <FactExcerpt key={fact.id} {...fact} />
               ))

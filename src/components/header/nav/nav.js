@@ -10,8 +10,9 @@ import Newsletter from '../newsletter/newsletter';
 export default class Nav extends React.Component {
 
   render() {
+    console.log(this.props.match.path);
     return (
-      <div className={this.props.store.toggleMenu ? 'nav nav-open' : 'nav'}>
+      <div className={this._navClass()}>
         <a className="nav_close_menu" onClick={this._closeMenu}>x</a>
         <Link to="/airplanes">airplanes</Link>
         <Link to="/incidents">incidents</Link>
@@ -21,6 +22,16 @@ export default class Nav extends React.Component {
         {this.props.store.openNewsletter ? <Newsletter /> : null}
       </div>
     );
+  }
+
+  _navClass = () => {
+    if (this.props.match.path === '/facts' && this.props.store.toggleMenu === true) {
+      return 'nav nav-open nav-facts';
+    } else if (this.props.store.toggleMenu === true) {
+      return 'nav nav-open';
+    } else {
+      return 'nav';
+    }
   }
 
   _newsletterClick = () => {

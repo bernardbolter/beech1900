@@ -3,14 +3,17 @@
 .incident-excerpt
   width: 100%
   display: flex
-  flex-direction: row
+  flex-direction: column
   border-bottom: 1px solid #999999
   padding: 20px 0
   margin: 0
+  @media screen and (min-width: 650px)
+    flex-direction: row
 
   p
     padding: 0
     margin: 0
+    color: #666666
 
 .incident-odd
   background: lighten($country, 20%)
@@ -18,29 +21,60 @@
 .incident-even
   background: lighten($ops, 50%)
 
+.incidents-link
+  text-decoration: none
+
 .incident-left
-  width: 30%
+  width: 100%
   display: flex
-  flex-direction: column
-  justify-content: flex-end
+  flex-direction: row
+  justify-content: center
+  margin-bottom: 10px
+  @media screen and (min-width: 650px)
+    width: 30%
+    flex-direction: column
+    justify-content: flex-end
+
+.incident-left-one
+  width: 47%
+  margin: 0 3% 0 0
+  text-align: right
+  @media screen and (min-width: 650px)
+    width: 100%
+    text-align: right
+    margin: 0
 
   p
+    margin-bottom: 5px
+
+.incident-left-two
+  width: 50%
+  text-align: left
+  @media screen and (min-width: 650px)
+    width: 100%
     text-align: right
-    margin-right: 20px
+
+  p
+    margin-bottom: 5px
+
 
 .incident-span
-  color: #999
+  color: #999 !important
   font-size: 11px
   display: block
   padding-bottom: 4px
 
 .incident-right
-  width: 70%
+  width: 90%
+  margin: 0 5%
   display: flex
   flex-direction: column
   justify-content: flex-start
   padding: 0
+  @media screen and (min-width: 650px)
+    width: 70%
+    margin: 0
 
   p
     text-align: left
-    margin-left: 20px
+    margin: 0 0 10px 20px

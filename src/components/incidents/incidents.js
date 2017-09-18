@@ -18,13 +18,25 @@ export default class Incidents extends React.Component {
           <section className="incidents-top-info">
             {this._incidentsCount()}
           </section>
+          <div className={this._incidentWrapClass()}>
           {this.props.store.filteredIncidents.slice().map( incident => (
                 <IncidentsExerpt key={incident.id} {...incident} />
               ))
             }
+          </div>
         </div>
       </section>
     );
+  }
+
+  _incidentWrapClass = () => {
+    if (this.props.store.toggleSearch === true) {
+      return 'incident_wrap incident_wrap_search'
+    } else if (this.props.store.toggleMenu === true) {
+      return 'incident_wrap incident_wrap_menu'
+    } else {
+      return 'incident_wrap'
+    }
   }
 
   _incidentsCount = () => {
