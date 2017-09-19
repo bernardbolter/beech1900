@@ -8,7 +8,7 @@ export default class Newsletter extends React.Component {
   render() {
     return (
       <div className="newsletter">
-        <a onClick={this._closeNewsletter}>x</a>
+        <a onClick={this._closeNewsletter}>close <span className="news_x">x</span></a>
         <p>Sign up for our Newsletter</p>
         <input />
         <div className="signup">
@@ -19,7 +19,6 @@ export default class Newsletter extends React.Component {
   }
 
   _closeNewsletter = () => {
-    console.log(this.props.store.openNewsletter);
     this.props.store.openNewsletter = false;
   }
 }

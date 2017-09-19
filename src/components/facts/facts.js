@@ -13,7 +13,8 @@ render() {
     return (
       <section>
       <Header match={this.props.match} />
-        <div className="facts">
+        <div className="facts-line"></div>
+        <div className={this.props.store.toggleMenu ? 'facts facts-open' : 'facts'}>
         <h1>Facts about the Beech 1900</h1>
           <div className="facts_info">
             <p>The Beechcraft 1900 is a 19-passenger, pressurized twin-engine turboprop fixed-wing aircraft that was manufactured by Beechcraft. It was designed, and is primarily used, as a regional airliner. It is also used as a freight aircraft and corporate transport, and by several governmental and military organisations. With customers favoring larger regional jets, Raytheon ended production in October 2002.</p>

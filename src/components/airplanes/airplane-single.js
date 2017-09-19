@@ -1,6 +1,7 @@
 import React from 'react';
 import { observer, inject} from 'mobx-react';
 import { Link } from 'react-router-dom';
+import _ from 'lodash';
 
 import './airplane-single.sass';
 
@@ -66,7 +67,6 @@ export default class AirplaneSingle extends React.Component {
 
             {this.getEvents()}
 
-
           </div>
         </section>
       </section>
@@ -96,16 +96,30 @@ export default class AirplaneSingle extends React.Component {
     if (this.state.singleData.incidentHistory !== "") {
       const incidents = this.state.singleData.incidentHistory.toString();
       let incidentArray = incidents.split(";");
-      console.log(incidentArray);
+      console.log('array ' + incidentArray);
 
-      let filteredIncidents = [];
-      incidentArray.map(incident => {
-        let anIncident = this.props.store.incidentsData.slice().filter(function(obj) {
-          return obj.id === incident;
+      // let filteredIncidents = incidentArray.filter(function(el) {
+      //   console.log(el);
+      //   return (el === allIncidents.id);
+      // });
+
+      let filteredIncidents = this.props.store.incidentsData.slice().filter(function(el) {
+        let tempIncidents = incidentArray.map(incident_id => {
+          return incident_id === el.id;
         });
-        console.log(anIncident);
-        filteredIncidents.push(anIncident[0]);
+        return tempIncidents;
       });
+
+      console.log(filteredIncidents);
+
+      // let filteredIncidents = _.difference(this.props.store.incidentsData.slice(), incidentArray);
+      // console.log(filteredIncidents);
+      // let filteredIncidents = this.props.store.incidentsData.slice().filter(myCallback);
+      // console.log(filteredIncidents);
+      //
+      // function myCallback(el) {
+      //   return incidentArray === el.id;
+      // }
 
       return (
         <div>

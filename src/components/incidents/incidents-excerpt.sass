@@ -5,7 +5,7 @@
   display: flex
   flex-direction: column
   border-bottom: 1px solid #999999
-  padding: 20px 0
+  padding: 0
   margin: 0
   @media screen and (min-width: 650px)
     flex-direction: row
@@ -15,37 +15,71 @@
     margin: 0
     color: #666666
 
+  .incident-date
+    background: lighten($date, 30%)
+    padding: 20px 10px 5px
+
+  .incident-serial
+    background: lighten($serial, 30%)
+    padding: 5px 10px 5px
+
+  .incident-registration
+    background: lighten($reg, 30%)
+    padding: 5px 10px 5px
+
+  .incident-operator
+    background: lighten($ops, 40%)
+    padding: 5px 10px 5px
+
+  .incident-location
+    padding: 20px 0 5px 10px
+
+  .incident-airport
+    padding: 5px 0 5px 10px
+
+  .incident-fatalities
+    padding: 5px 0 5px 10px
+    background: white
+
 .incident-odd
-  background: lighten($country, 20%)
+  background: #f9f9f9
 
 .incident-even
-  background: lighten($ops, 50%)
+  background: #efefef
 
 .incidents-link
   text-decoration: none
+  &:hover
+    p
+      background: lighten($serial, 40%)
 
 .incident-left
   width: 100%
   display: flex
   flex-direction: row
   justify-content: center
-  margin-bottom: 10px
   @media screen and (min-width: 650px)
     width: 30%
     flex-direction: column
     justify-content: flex-end
 
+  @media screen and (min-width: 900px)
+    width: 30%
+    flex-direction: row
+    justify-content: center
+
 .incident-left-one
-  width: 47%
-  margin: 0 3% 0 0
+  width: 50%
+  margin: 0
   text-align: right
   @media screen and (min-width: 650px)
     width: 100%
     text-align: right
     margin: 0
-
-  p
-    margin-bottom: 5px
+  @media screen and (min-width: 900px)
+    width: 50%
+    margin: 0
+    text-align: right
 
 .incident-left-two
   width: 50%
@@ -53,10 +87,9 @@
   @media screen and (min-width: 650px)
     width: 100%
     text-align: right
-
-  p
-    margin-bottom: 5px
-
+  @media screen and (min-width: 900px)
+    width: 50%
+    text-align: left
 
 .incident-span
   color: #999 !important
@@ -66,14 +99,17 @@
 
 .incident-right
   width: 90%
-  margin: 0 5%
+  padding: 20px 5%
+  background: rgba(255,255,255,0.7)
   display: flex
   flex-direction: column
   justify-content: flex-start
-  padding: 0
   @media screen and (min-width: 650px)
     width: 70%
     margin: 0
+  @media screen and (min-width: 900px)
+    width: 70%
+    padding: 10px 0 0
 
   p
     text-align: left

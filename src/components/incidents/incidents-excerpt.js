@@ -9,12 +9,11 @@ export default class IncidentExcerpt extends React.Component {
 
   render() {
     return (
-      <Link to={`/airplanes/${this.props.serial}`} className="incidents-link">
         <div className={parseInt(this.props.id, 10) & 1 ? 'incident-excerpt incident-odd' : 'incident-excerpt incident-even'}>
           <div className="incident-left">
             <div className="incident-left-one">
               <p className="incident-date"><span className="incident-span">Date of Incident</span>{this.props.date}</p>
-              <p className="incident-serial"><span className="incident-span">Serial Number</span>{this.props.serial}</p>
+              {this._renderSerial()}
               <p className="incident-registration"><span className="incident-span">Registration</span>{this.props.registration}</p>
               <p className="incident-operator"><span className="incident-span">Operator</span>{this.props.operator}</p>
             </div>
@@ -31,7 +30,13 @@ export default class IncidentExcerpt extends React.Component {
             <p className="incident-additional-information"><span className="incident-span">Aditional Information</span>{this.props.additionalInformation}</p>
           </div>
         </div>
-      </Link>
     );
+  }
+  _renderSerial = () => {
+    if (this.props.serial === '' || this.props.serial === '?') {
+      return <p className="incident-serial"><span className="incident-span">Serial Number</span>{this.props.serial}</p>;
+    } else {
+      return <Link to={`/airplanes/${this.props.serial}`} className="incidents-link"><p className="incident-serial"><span className="incident-span">Serial Number</span>{this.props.serial}</p></Link>;
+    }
   }
 }
