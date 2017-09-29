@@ -90,12 +90,12 @@ export default class AirplaneSearch extends React.Component {
   getIncidentTypeDropdown = () => {
     const incidentTypeList = [];
     this.props.store.incidentsData.map(incident => {
-      if (incident.type === "No data") {
+      if (incident.accidentType === "No data") {
         return null;
-      } else if (incident.type === "?") {
+      } else if (incident.accidentType === "?") {
         return null;
       } else {
-        incidentTypeList.push(incident.type);
+        incidentTypeList.push(incident.accidentType);
         return null;
       }
     });

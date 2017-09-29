@@ -18,16 +18,17 @@ export default class IncidentExcerpt extends React.Component {
               <p className="incident-operator"><span className="incident-span">Operator</span>{this.props.operator}</p>
             </div>
             <div className="incident-left-two">
-              <p className="incident-location"><span className="incident-span">Location</span>{this.props.location}</p>
-              <p className="incident-airport"><span className="incident-span">Airport</span>{this.props.airport}</p>
+              <p className="incident-location"><span className="incident-span">Location</span>{this.props.locationCity}</p>
+              <p className="incident-airport"><span className="incident-span">Airport</span>{this.props.locationAirport}</p>
               <p className="incident-fatalities"><span className="incident-span">Fatalities</span>{this.props.fatalities}</p>
             </div>
           </div>
           <div className="incident-right">
-            <p className="incident-type"><span className="incident-span">Type of Incident</span>{this.props.type}</p>
-            <p className="incident-editorial-synopsis"><span className="incident-span">Synopsis</span>{this.props.editorialSynopsis}</p>
-            <p className="incident-report-number"><span className="incident-span">Report Number</span>{this.props.reportNumber}</p>
-            <p className="incident-additional-information"><span className="incident-span">Aditional Information</span>{this.props.additionalInformation}</p>
+            <p className="incident-type"><span className="incident-span">Type of Incident</span>{this.props.accidentType}</p>
+            <p className="incident-editorial-synopsis"><span className="incident-span">Synopsis</span>{this.props.editorial}</p>
+            {this.props.ntsbreportNumber ? <p className="incident-ntsb-number"><span className="incident-span">NTSB Report Number</span>{this.props.ntsbreportNumber}</p> : null }
+            {this.props.otherReport ? <p className="incident-other-report"><span className="incident-span">Other Report</span>{this.props.otherReport}</p> : null }
+            {this.props.additionalInfo ? <p className="incident-additional-information"><span className="incident-span">Aditional Information</span>{this.props.additionalInfo}</p> : null }
           </div>
         </div>
     );
@@ -36,7 +37,7 @@ export default class IncidentExcerpt extends React.Component {
     if (this.props.serial === '' || this.props.serial === '?') {
       return <p className="incident-serial"><span className="incident-span">Serial Number</span>{this.props.serial}</p>;
     } else {
-      return <Link to={`/airplanes/${this.props.serial}`} className="incidents-link"><p className="incident-serial"><span className="incident-span">Serial Number</span>{this.props.serial}</p></Link>;
+      return <Link to={`/airplanes/${this.props.serial}`} className="incidents-link"><p className="incident-serial"><img src={`${process.env.PUBLIC_URL}/link.png`} alt="Link Graphic" /><span className="incident-span">Serial Number</span>{this.props.serial}</p></Link>;
     }
   }
 }

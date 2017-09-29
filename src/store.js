@@ -72,47 +72,78 @@ class Store {
     let airplaneCountry = [];
     let airplaneOperator = [];
 
+    // FILTER LIST BY AIRPLANE TYPE
+
+    if (this.uaChecked === true) {
+      airplaneUA = airplaneFiltered.filter(plane => plane.serial.match(/^UA/));
+    }
+    if (this.ubChecked === true) {
+      airplaneUB = airplaneFiltered.filter(plane => plane.serial.match(/^UB/));
+    }
+    if (this.ucChecked === true) {
+      airplaneUC = airplaneFiltered.filter(plane => plane.serial.match(/^UC/));
+    }
+    if (this.ueChecked === true) {
+      airplaneUE = airplaneFiltered.filter(plane => plane.serial.match(/^UE/));
+    }
+
+    airplaneType = airplaneUA.concat(airplaneUB, airplaneUC, airplaneUE);
+
+
+    if (this.uaChecked === false && this.ubChecked === false && this.ucChecked === false && this.ueChecked === false) {
+      airplaneType = airplaneFiltered;
+    }
+
+    console.log('airplane type:');
+    console.log(airplaneType);
+
+
     // FILTER LIST BY CURRENT STATUS
 
     if (this.operatingChecked === true ) {
-      airplaneOperating = airplaneFiltered.filter(plane => plane.currentStatus.match(/^Operating$/));
+      airplaneOperating = airplaneType.filter(plane => plane.currentStatus.match(/^Operating$/));
     }
 
     if (this.operatingNonCurrentChecked === true ) {
-      airplaneOperatingNonCurrent = airplaneFiltered.filter(plane => plane.currentStatus.match(/Non-Current/));
+      airplaneOperatingNonCurrent = airplaneType.filter(plane => plane.currentStatus.match(/Non-Current/));
     }
 
     if (this.nonFlyingChecked === true ) {
-      airplaneNonFlying = airplaneFiltered.filter(plane => plane.currentStatus.match(/^Non-Flying/));
+      airplaneNonFlying = airplaneType.filter(plane => plane.currentStatus.match(/^Non-Flying/));
     }
 
     if (this.partedOutChecked === true ) {
-      airplanePartedOut = airplaneFiltered.filter(plane => plane.currentStatus.match(/^Parted/));
+      airplanePartedOut = airplaneType.filter(plane => plane.currentStatus.match(/^Parted/));
     }
 
     if (this.destroyedChecked === true ) {
-      airplaneDestroyed = airplaneFiltered.filter(plane => plane.currentStatus.match(/^Destroyed/));
+      airplaneDestroyed = airplaneType.filter(plane => plane.currentStatus.match(/^Destroyed/));
     }
 
     airplaneStatus = airplaneOperating.concat(airplaneOperatingNonCurrent, airplaneNonFlying, airplanePartedOut, airplaneDestroyed);
 
-    if (airplaneStatus.length === 0) {
-      airplaneStatus = airplaneFiltered;
+    if (this.operatingChecked === false && this.operatingNonCurrentChecked === false && this.nonFlyingChecked === false && this.partedOutChecked === false && this.destroyedChecked === false ) {
+      airplaneStatus = airplaneType;
     }
 
     airplaneStatus.sort( function(a, b) {
       return a.id - b.id;
     });
 
+    console.log('airplane status:');
+    console.log(airplaneStatus);
+
 
     // FILTER LIST BY DROPDOWN VALUES
 
     if (this.countryValue) {
+      console.log(this.countryValue);
       const theCountry = new RegExp(this.countryValue);
       airplaneCountry = airplaneStatus.filter(plane => plane.latestCountry.match(theCountry));
     }
 
     if (this.operatorValue) {
+      console.log(this.operatorValue);
       const theOperator = new RegExp(this.operatorValue);
       airplaneOperator = airplaneStatus.filter(plane => plane.latestOperator.match(theOperator));
     }
@@ -123,7 +154,8 @@ class Store {
         return inputArray.indexOf(item) === index;
     });
 
-    if (airplaneDrop.length === 0) {
+    if (this.countryValue === '' && this.operatorValue === '') {
+      console.log('no drop');
       airplaneDrop = airplaneStatus;
     }
 
@@ -131,33 +163,12 @@ class Store {
       return a.id - b.id;
     });
 
-    // FILTER LIST BY AIRPLANE TYPE
-
-    if (this.uaChecked === true) {
-      airplaneUA = airplaneDrop.filter(plane => plane.serial.match(/^UA/));
-    }
-    if (this.ubChecked === true) {
-      airplaneUB = airplaneDrop.filter(plane => plane.serial.match(/^UB/));
-    }
-    if (this.ucChecked === true) {
-      airplaneUC = airplaneDrop.filter(plane => plane.serial.match(/^UC/));
-    }
-    if (this.ueChecked === true) {
-      airplaneUE = airplaneDrop.filter(plane => plane.serial.match(/^UE/));
-    }
-
-    airplaneType = airplaneUA.concat(airplaneUB, airplaneUC, airplaneUE);
-
-    if (airplaneType.length === 0) {
-      airplaneType = airplaneDrop;
-    }
-
     // SORT LIST BEFORE RETURNING
 
     if (this.newerChecked === true) {
-      airplaneSorted = airplaneType.reverse();
+      airplaneSorted = airplaneDrop.reverse();
     } else {
-      airplaneSorted = airplaneType;
+      airplaneSorted = airplaneDrop;
     }
 
     airplaneResults = airplaneSorted;
@@ -181,7 +192,7 @@ class Store {
 
   @computed get filteredIncidents() {
     const matchesIncidentsFilter = new RegExp(this.incidentsFilter, 'i');
-    let incidentsFiltered = this.incidentsData.filter(incident => !this.incidentsFilter || matchesIncidentsFilter.test(incident.registration) || matchesIncidentsFilter.test(incident.location) ||matchesIncidentsFilter.test(incident.operator) || matchesIncidentsFilter.test(incident.airport));
+    let incidentsFiltered = this.incidentsData.filter(incident => !this.incidentsFilter || matchesIncidentsFilter.test(incident.registration) || matchesIncidentsFilter.test(incident.locationCity) ||matchesIncidentsFilter.test(incident.operator) || matchesIncidentsFilter.test(incident.locationAirport));
     let incidentsSorted = [];
     let incidentsType = [];
     let incidentsFatal = [];
@@ -202,7 +213,7 @@ class Store {
 
     if (this.incidentsTypeValue) {
       const theIncident = new RegExp(this.incidentsTypeValue);
-      incidentsType = incidentsFatal.filter(incident => incident.type.match(theIncident));
+      incidentsType = incidentsFatal.filter(incident => incident.accidentType.match(theIncident));
     } else {
       incidentsType = incidentsFatal;
     }
