@@ -10,7 +10,6 @@ import IncidentsExerpt from './incidents-excerpt';
 export default class Incidents extends React.Component {
 
   render() {
-    console.log(this.props.history);
     return (
       <section>
       <Header match={this.props.match}/>
@@ -19,6 +18,7 @@ export default class Incidents extends React.Component {
             {this._incidentsCount()}
           </section>
           <div className={this._incidentWrapClass()}>
+          {this._showIncidents()}
           {this.props.store.filteredIncidents.slice().map( incident => (
                 <IncidentsExerpt key={incident.id} {...incident} />
               ))
@@ -27,6 +27,22 @@ export default class Incidents extends React.Component {
         </div>
       </section>
     );
+  }
+  _showIncidents = () => {
+    if (this.props.store.filteredIncidents.length === 0) {
+      return (
+        <div className='no-incident'>
+          <img src={`${process.env.PUBLIC_URL}/b1900-logo.png`} alt="BEECH 1900 Graphic" />
+          <p>no incidents were found in your search</p>
+        </div>
+      )
+    } else {
+      return (
+        this.props.store.filteredIncidents.slice().map( incident => (
+          <IncidentsExerpt key={incident.id} {...incident} />
+        ))
+      )
+    }
   }
 
   _incidentWrapClass = () => {

@@ -38,14 +38,28 @@ export default class Airplanes extends React.Component {
                 <p>Country</p>
               </div>
             </section>
-            {this.props.store.filteredAirplanes.slice().map( plane => (
-                  <AirplaneExcerpt key={plane.id} {...plane} />
-                ))
-              }
+            {this._showAirplanes()}
           </div>
         </div>
       </section>
     );
+  }
+
+  _showAirplanes = () => {
+    if (this.props.store.filteredAirplanes.length === 0) {
+      return (
+        <div className='no-incident'>
+          <img src={`${process.env.PUBLIC_URL}/b1900-logo.png`} alt="BEECH 1900 Graphic" />
+          <p>no airplanes were found in your search</p>
+        </div>
+      )
+    } else {
+      return (
+        this.props.store.filteredAirplanes.slice().map( plane => (
+            <AirplaneExcerpt key={plane.id} {...plane} />
+          ))
+      )
+    }
   }
 
   _airplaneClass = () => {

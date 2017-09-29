@@ -54,7 +54,6 @@ class Store {
     let airplaneSorted = [];
     let airplaneType = [];
     let airplaneStatus = [];
-    let airplaneDoubles = [];
     let airplaneDrop = [];
     let airplaneResults = [];
 
@@ -94,10 +93,6 @@ class Store {
       airplaneType = airplaneFiltered;
     }
 
-    console.log('airplane type:');
-    console.log(airplaneType);
-
-
     // FILTER LIST BY CURRENT STATUS
 
     if (this.operatingChecked === true ) {
@@ -130,34 +125,24 @@ class Store {
       return a.id - b.id;
     });
 
-    console.log('airplane status:');
-    console.log(airplaneStatus);
+    // FILTER LIST BY COUNTRY and OPERATOR VALUES
 
-
-    // FILTER LIST BY DROPDOWN VALUES
-
-    if (this.countryValue) {
-      console.log(this.countryValue);
+    if (this.countryValue === null || this.countryValue === 'Select Country') {
+      airplaneCountry = airplaneStatus;
+    } else {
       const theCountry = new RegExp(this.countryValue);
       airplaneCountry = airplaneStatus.filter(plane => plane.latestCountry.match(theCountry));
     }
 
-    if (this.operatorValue) {
-      console.log(this.operatorValue);
+
+    if (this.operatorValue === null || this.operatorValue === 'Select Latest Operator') {
+      airplaneOperator = airplaneCountry;
+    } else {
       const theOperator = new RegExp(this.operatorValue);
-      airplaneOperator = airplaneStatus.filter(plane => plane.latestOperator.match(theOperator));
+      airplaneOperator = airplaneCountry.filter(plane => plane.latestOperator.match(theOperator));
     }
 
-    airplaneDoubles = airplaneCountry.concat(airplaneCountry, airplaneOperator);
-
-    airplaneDrop = airplaneDoubles.filter( function( item, index, inputArray ) {
-        return inputArray.indexOf(item) === index;
-    });
-
-    if (this.countryValue === '' && this.operatorValue === '') {
-      console.log('no drop');
-      airplaneDrop = airplaneStatus;
-    }
+    airplaneDrop = airplaneOperator;
 
     airplaneDrop.sort( function(a, b) {
       return a.id - b.id;
@@ -211,11 +196,11 @@ class Store {
       incidentsFatal = incidentsFiltered;
     }
 
-    if (this.incidentsTypeValue) {
+    if (this.incidentsTypeValue === null || this.incidentsTypeValue === 'Select Incident Type') {
+      incidentsType = incidentsFatal;
+    } else {
       const theIncident = new RegExp(this.incidentsTypeValue);
       incidentsType = incidentsFatal.filter(incident => incident.accidentType.match(theIncident));
-    } else {
-      incidentsType = incidentsFatal;
     }
 
 

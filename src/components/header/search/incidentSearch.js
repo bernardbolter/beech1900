@@ -34,7 +34,7 @@ export default class AirplaneSearch extends React.Component {
             <input type="checkbox" id="newer" value="newer" checked={this.props.store.incidentsNewerChecked} onChange={this.toggleSorting} />
           </label>
 
-          <input className="search-input filter" placeholder="search location, airport, operator..." type="text" value={this.props.store.incidentsFilter} onChange={this.filterIncidents} />
+          <input className="search-input filter" placeholder="search city, airport, operator, reg" type="text" value={this.props.store.incidentsFilter} onChange={this.filterIncidents} />
         </div>
 
         <div className="incident-column-two">
