@@ -52,6 +52,10 @@ export default class AirplaneSearch extends React.Component {
             <input type="checkbox" id="uc" value="uc" checked={this.props.store.ucChecked} onChange={this.toggleFilters} />
             <span> UC</span>
           </label>
+          <label htmlFor="ud" className="filter-label check-ud">
+            <input type="checkbox" id="ud" value="ud" checked={this.props.store.udChecked} onChange={this.toggleFilters} />
+            <span> UD</span>
+          </label>
           <label htmlFor="ue" className="filter-label check-ue">
             <input type="checkbox" id="ue" value="ue" checked={this.props.store.ueChecked} onChange={this.toggleFilters} />
             <span> UE</span>
@@ -82,7 +86,7 @@ export default class AirplaneSearch extends React.Component {
         </div>
 
         <div className="search-column-four">
-          <div className="search-reset" onClick={this.searchReset}>
+          <div className="search-reset" onClick={this.props.store.resetSearch}>
             <svg id="reset-svg" width="18px" height="20px" viewBox="0 0 18 20" version="1.1">
                 <g>
                     <path d="M16.2378148,11.0185282 L16.2378148,11.0277564 C16.2378148,15.0773034 12.9756496,18.3717673 8.92637405,18.3717673 C4.87682708,18.3717673 1.6122191,15.0773034 1.6122191,11.0277564 C1.6122191,7.0039941 4.83828581,3.72744376 8.90954617,3.68645974 L8.90954617,5.02780432 C8.90954617,5.79862962 9.59894626,5.81844308 9.98083048,5.47482871 L12.7910858,3.38111521 C12.7910858,3.38111521 13.0972446,3.12544006 13.0972446,2.84398026 C13.0972446,2.54840676 12.7859289,2.30684531 12.7859289,2.30684531 L9.98164473,0.21313182 C9.59976051,-0.130482555 8.90954617,-0.11039767 8.90954617,0.660156207 L8.90954617,2.05768418 C4.02403374,2.0986682 0,6.10587406 0,11.027485 C0,15.975152 3.98603531,20 8.9334309,20 C13.8802837,20.0002714 17.866319,15.9754234 17.866319,11.0277564 L17.866319,11.0185282 C17.866319,11.0185282 17.866319,10.1024946 17.0420244,10.1024946 C16.2673993,10.1022232 16.2378148,11.0185282 16.2378148,11.0185282 Z"></path>
@@ -141,6 +145,9 @@ export default class AirplaneSearch extends React.Component {
       break;
       case 'uc':
         this.props.store.ucChecked = !this.props.store.ucChecked;
+      break;
+      case 'ud':
+        this.props.store.udChecked = !this.props.store.udChecked;
       break;
       case 'ue':
         this.props.store.ueChecked = !this.props.store.ueChecked;
@@ -224,6 +231,7 @@ export default class AirplaneSearch extends React.Component {
     this.props.store.uaChecked = false;
     this.props.store.ubChecked = false;
     this.props.store.ucChecked = false;
+    this.props.store.udChecked = false;
     this.props.store.ueChecked = false;
     this.props.store.operatingChecked = false;
     this.props.store.operatingNonCurrentChecked = false;

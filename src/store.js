@@ -24,6 +24,7 @@ class Store {
   @observable uaChecked = false;
   @observable ubChecked = false;
   @observable ucChecked = false;
+  @observable udChecked = false;
   @observable ueChecked = false;
 
   @observable operatingChecked = false;
@@ -60,6 +61,7 @@ class Store {
     let airplaneUA = [];
     let airplaneUB = [];
     let airplaneUC = [];
+    let airplaneUD = [];
     let airplaneUE = [];
 
     let airplaneOperating = [];
@@ -82,14 +84,17 @@ class Store {
     if (this.ucChecked === true) {
       airplaneUC = airplaneFiltered.filter(plane => plane.serial.match(/^UC/));
     }
+    if (this.udChecked === true) {
+      airplaneUD = airplaneFiltered.filter(plane => plane.serial.match(/^UD/));
+    }
     if (this.ueChecked === true) {
       airplaneUE = airplaneFiltered.filter(plane => plane.serial.match(/^UE/));
     }
 
-    airplaneType = airplaneUA.concat(airplaneUB, airplaneUC, airplaneUE);
+    airplaneType = airplaneUA.concat(airplaneUB, airplaneUC, airplaneUD, airplaneUE);
 
 
-    if (this.uaChecked === false && this.ubChecked === false && this.ucChecked === false && this.ueChecked === false) {
+    if (this.uaChecked === false && this.ubChecked === false && this.ucChecked === false && this.udChecked === false && this.ueChecked === false) {
       airplaneType = airplaneFiltered;
     }
 
@@ -219,38 +224,93 @@ class Store {
     let theKeys = [];
     let p = theKey;
     // Get all the valuse into one array
-    this.airplaneData.slice().map(x => (
-      theKeys.push(x[p])
-    ));
-    // Sort that array so it can be parsed and counted
-    theKeys.sort();
-    let current = null;
-    let count = 0;
-    let theList = [];
-
-    // Group the data in to objects with name and count
-    for(var i = 0; i < theKeys.length; i++) {
-      if (theKeys[i] !== current) {
-        if (count > 0) {
-          theList.push({
-            name: theKeys[i],
-            count: count
-          })
+    if (theKey === "accidentType") {
+      this.incidentsData.slice().map(y => {
+        return theKeys.push(y.accidentType);
+      });
+    } else {
+      this.airplaneData.slice().map(x => {
+        if (theKey === "serial") {
+          var shortValue = x.serial.substring(0,2);
+          return theKeys.push(shortValue);
+        } else if (theKey === "latestCountry") {
+        if (x.latestCountry.charAt(0) === `(`) {
+            var noCountry = x.latestCountry.slice(1, -1);
+            return theKeys.push(noCountry);
+          } else {
+            return theKeys.push(x.latestCountry);
+          }
+        } else if (theKey === "latestOperator") {
+        if (x.latestOperator === "?") {
+            return null;
+          } else if (x.latestOperator.charAt(0) === `(`) {
+            var noOp = x.latestOperator.slice(1, -1);
+            return theKeys.push(noOp);
+          } else {
+            return theKeys.push(x.latestOperator);
+          }
+        } else if (theKey === "airplaneProduction") {
+        if (x.factoryDate === "?") {
+            return null;
+          } else {
+             var theYear = x.factoryDate.slice(-2);
+             if (theYear.charAt(0) === ("0" || "1")) {
+               theYear = "20" + theYear;
+             } else {
+               theYear = "19" + theYear;
+             }
+            return theKeys.push(theYear);
+          }
+        } else {
+          return theKeys.push(x[p]);
         }
-        current = theKeys[i];
-        count = 0;
-      }
-      else {
-        count++;
-      }
+      });
     }
 
-    // Sort the objects so from largest count to lowest
-    theList.sort(function(a,b) {
+    // Sort that array so it can be parsed and counted
+    theKeys.sort();
+
+    let theList = {};
+    let finalList = [];
+
+    theKeys.forEach(function(x) { theList[x] = (theList[x] || 0)+1; });
+
+    Object.keys(theList).forEach((key) => {
+      finalList.push({ name: key, count: theList[key]});
+    });
+
+    //Sort the objects so from largest count to lowest
+    finalList.sort(function(a,b) {
       return b.count - a.count;
     });
 
-    return theList;
+    return finalList;
+  }
+
+  @action resetSearch = () => {
+    this.airplaneFilter = '';
+    this.countryValue = '';
+    this.operatorValue = '';
+    this.uaChecked = false;
+    this.ubChecked = false;
+    this.ucChecked = false;
+    this.udChecked = false;
+    this.ueChecked = false;
+    this.operatingChecked = false;
+    this.operatingNonCurrentChecked = false;
+    this.nonFlyingChecked = false;
+    this.partedOutChecked = false;
+    this.destroyedChecked = false;
+    this.newerChecked = false;
+    this.olderChecked = true;
+  }
+
+  @action incidentsSearchReset = () => {
+    this.incidentsFilter = '';
+    this.incidentsTypeValue = '';
+    this.incidentsNewerChecked = false;
+    this.incidentsOlderChecked = true;
+    this.incidentsFatalitiesChecked = false;
   }
 }
 
