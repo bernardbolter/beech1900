@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { observer, inject } from 'mobx-react';
 
 import './logo.sass';
@@ -9,10 +10,10 @@ export default class Logo extends React.Component {
   render() {
     return (
       <div className="logo">
-        <div className="logo_text_wrap">
+        <Link to="/" className="logo_text_wrap">
           <p>BEECH</p>
           <p>1900</p>
-        </div>
+        </Link>
         <div className="mobile_buttons">
           <a onClick={this._openMenu} className="search-menu">menu</a>
           <a onClick={this._openSearch} className={this._searchClass()}>

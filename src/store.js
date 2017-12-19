@@ -215,8 +215,42 @@ class Store {
     return incidentsResults;
   }
 
-  @computed get theFacts() {
+  @action calculateGridData(theKey) {
+    let theKeys = [];
+    let p = theKey;
+    // Get all the valuse into one array
+    this.airplaneData.slice().map(x => (
+      theKeys.push(x[p])
+    ));
+    // Sort that array so it can be parsed and counted
+    theKeys.sort();
+    let current = null;
+    let count = 0;
+    let theList = [];
 
+    // Group the data in to objects with name and count
+    for(var i = 0; i < theKeys.length; i++) {
+      if (theKeys[i] !== current) {
+        if (count > 0) {
+          theList.push({
+            name: theKeys[i],
+            count: count
+          })
+        }
+        current = theKeys[i];
+        count = 0;
+      }
+      else {
+        count++;
+      }
+    }
+
+    // Sort the objects so from largest count to lowest
+    theList.sort(function(a,b) {
+      return b.count - a.count;
+    });
+
+    return theList;
   }
 }
 

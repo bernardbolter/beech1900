@@ -10,6 +10,7 @@ import { Provider } from 'mobx-react';
 import { Router, Route } from 'react-router-dom';
 import { RouterStore } from 'mobx-react-router';
 
+import Home from './components/home/home';
 import Airplanes from './components/airplanes/airplanes';
 import AirplaneSingle from './components/airplanes/airplane-single';
 import Incidents from './components/incidents/incidents';
@@ -32,7 +33,7 @@ const Root = () => {
     <Provider {...stores}>
       <Router history={browserHistory}>
         <div className="container">
-          <Route exact path="/" component={Airplanes} />
+          <Route exact path="/" component={Home} />
           <Route exact path="/airplanes" component={Airplanes} />
           <Route path="/airplanes/:serial" component={AirplaneSingle} />
           <Route path="/incidents" component={Incidents} />

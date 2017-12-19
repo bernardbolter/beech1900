@@ -4,6 +4,7 @@ import { observer, inject } from 'mobx-react';
 import './header.sass';
 
 import Logo from './logo/logo';
+import HomeSearch from './search/homeSearch';
 import AirplaneSearch from './search/airplaneSearch';
 import IncidentSearch from './search/incidentSearch';
 import FactSearch from './search/factSearch';
@@ -32,6 +33,10 @@ export default class Header extends React.Component {
       return <FactSearch />;
     } else if (this.props.match.path === "/about") {
       return <AboutSearch />;
+    } else if (this.props.match.path === '/') {
+      return <HomeSearch />;
+    } else if (this.props.match.path === 'airplanes') {
+      return <AirplaneSearch history={this.props.history} />
     } else {
       return <AirplaneSearch history={this.props.history} />;
     }
