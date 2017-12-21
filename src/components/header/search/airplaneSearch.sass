@@ -1,4 +1,5 @@
 @import '../../../variables.scss'
+@import './checkbox.sass'
 
 .search
   position: absolute
@@ -24,6 +25,7 @@
     flex-wrap: nowrap
     border-bottom: none
     border-top: none
+    margin-right: 20px
 
 .search-open
   left: 0
@@ -90,9 +92,17 @@
 .search-input
   width: 80%
   margin: 5px 5% 5px 15px
+  outline: none
+  border: 1px solid $light-gray
+  padding: 3px
+  font-size: 12px
+  
   @media screen and (min-width: 650px)
     width: auto
     margin: 0
+
+  &:focus
+    border: 1px solid $dark-gray
 
 .search-column-two
   display: flex
@@ -100,7 +110,7 @@
   justify-content: flex-end
   margin: 0
   width: 35%
-  align-items: flex-end
+  align-items: flex-start
 
   @media screen and (min-width: 650px)
     width: auto

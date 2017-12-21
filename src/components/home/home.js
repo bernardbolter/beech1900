@@ -13,15 +13,21 @@ export default class About extends React.Component {
     return (
       <section>
       <Header match={this.props.match} />
-        <h1>Welcome to Beech1900.com! This website is an active database of information about this turboprop airline which was produced between 1984 and 2002. You'll find it a comprehensive and reliable provider of information, meant to be shared with my fellow aviation enthusiasts.</h1>
-        <h1>In 2006, former Captain and aviation enthusiast Aaron Kahn came up with this idea and started keeping track of the movements and statuses of all the Beech 1900s. Aaron’s hope is that you’ll enjoy this website and share it with your friends.</h1>
+        <div className="home-text">
+          <h1>Welcome to Beech1900.com! This website is an active database of information about this turboprop airline which was produced between 1984 and 2002. You'll find it a comprehensive and reliable provider of information, meant to be shared with my fellow aviation enthusiasts.</h1>
+          <h1>In 2006, former Captain and aviation enthusiast Aaron Kahn came up with this idea and started keeping track of the movements and statuses of all the Beech 1900s. Aaron’s hope is that you’ll enjoy this website and share it with your friends.</h1>
+          <p>below are the top rankings of the stats</p>
+        </div>
         <div className="home-grid">
           {this._makeGridRow("currentStatus")}
+          {this._makeGridRow("airplaneProduction")}
           {this._makeGridRow("latestOperator")}
           {this._makeGridRow("latestCountry")}
-          {this._makeGridRow("accidentType")}
           {this._makeGridRow("serial")}
-          {this._makeGridRow("airplaneProduction")}
+          {this._makeGridRow("accidentType")}
+        </div>
+        <div className="home-footer">
+          <p>all rights reserved - {new Date().getFullYear()}</p>
         </div>
       </section>
     );
@@ -31,20 +37,50 @@ export default class About extends React.Component {
     var theData = this.props.store.calculateGridData(key);
     return (
     <div className={"grid-" + key}>
-    {theData.slice(0, 10).map((data, i) => (
-        <Link to={key === "accidentType" ? "/incidents" : "/airplanes"} onClick={() => {this._decideLinks(data, key)}} className={"grid-cell grid-cell-" + key} key={i}>
-          <h5>{data.name}</h5>
-          <h5>{data.count}</h5>
-        </Link>
-        ))
+    {this._decideGridHeader(key)}
+
+    {theData.slice(0, 10).map((data, i) => {
+        if (data.name === null) {
+          return (
+            <div className={ i % 2 ? `grid-cell grid-cell-even grid-cell-${key}`: `grid-cell grid-cell-odd grid-cell-${key}`} key={i}></div>
+          )
+        } else {
+          return (
+            <Link to={key === "accidentType" ? "/incidents" : "/airplanes"} onClick={() => {this._decideLinks(data, key)}} key={i} className={ i % 2 ? `grid-cell grid-cell-even grid-cell-${key}`: `grid-cell grid-cell-odd grid-cell-${key}`}>
+              <p className="grid-name">{data.name}</p>
+              <p className="grid-count">{data.count}</p>
+            </Link>
+            )
+          }
+        })
       }
       </div>
     )
   }
 
+  _decideGridHeader = (key) => {
+    let headerText = '';
+    if (key === "serial") {
+      headerText = "Serial Series";
+    } else if (key === "currentStatus") {
+      headerText = "Current Status";
+    } else if (key === "latestCountry") {
+      headerText = "Top Countries";
+    } else if (key === "airplaneProduction") {
+      headerText = "Prod. Runs";
+    } else if (key === "latestOperator") {
+      headerText = "Top Operators";
+    } else if (key === "accidentType") {
+      headerText = "Top Incidents Type";
+    }
+    return (
+      <div className={"grid-cell-header grid-cell-header-" + key}>
+        <p>{headerText}</p>
+      </div>
+    )
+  }
+
   _decideLinks = (data, key) => {
-    console.log(data);
-    console.log(key);
     if (key === "serial") {
       if (data.name === "UA") {
         this.props.store.resetSearch();

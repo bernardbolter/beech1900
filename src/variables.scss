@@ -1,6 +1,19 @@
 $dark-color: #4a4a4a;
 $header-background: #fefefe;
 $header-text: #ffffff;
+$light-gray: #cecece;
+$dark-gray: #999999;
+$dark-sky: #ebf7ff;
+$light-sky: #f3faff;
+
+// HOME PAGE COLORS
+
+$home-first: #44b3c2;
+$home-second: #f1a94e;
+$home-third: #e45641;
+$home-fourth: #5d4c46;
+$home-fifth: #7b8d8e;
+$home-sixth: #729170;
 
 // AIRPLANE COLORS
 
@@ -15,6 +28,8 @@ $country: #b9c7bf;
 
 $incidents-even: #cccccc;
 $incidents-odd: #aaaaaa;
+
+$mobile-break: 950px;
 
 .container {
   width: 100%;

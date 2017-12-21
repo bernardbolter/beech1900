@@ -14,10 +14,10 @@ export default class Nav extends React.Component {
     return (
       <div className={this._navClass()}>
         <a className="nav_close_menu" onClick={this._closeMenu}>x</a>
+        <Link to="/">home</Link>
         <Link to="/airplanes">airplanes</Link>
         <Link to="/incidents">incidents</Link>
         <Link to="/facts">facts</Link>
-        <Link to="/about">about</Link>
         <a onClick={this._newsletterClick}>newsletter</a>
         {this.props.store.openNewsletter ? <Newsletter /> : null}
       </div>

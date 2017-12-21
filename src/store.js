@@ -284,6 +284,8 @@ class Store {
       return b.count - a.count;
     });
 
+    finalList = finalList.slice(0,10);
+
     return finalList;
   }
 

@@ -8,8 +8,9 @@ import './logo.sass';
 export default class Logo extends React.Component {
 
   render() {
+    console.log(this.props);
     return (
-      <div className="logo">
+      <div className={this._selectLogoClass()}>
         <Link to="/" className="logo_text_wrap">
           <p>BEECH</p>
           <p>1900</p>
@@ -28,8 +29,16 @@ export default class Logo extends React.Component {
     );
   }
 
+  _selectLogoClass = () => {
+    if (this.props.match.path === "/") {
+      return "logo logo-home";
+    } else {
+      return "logo";
+    }
+  }
+
   _searchClass = () => {
-    if (this.props.match.path === '/facts') {
+    if (this.props.match.path === '/facts' || this.props.match.path === '/') {
       return 'search-button-hide';
     } else if (this.props.store.searchButton === true) {
       return 'search-button search-button-on';

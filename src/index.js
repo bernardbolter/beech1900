@@ -16,7 +16,6 @@ import AirplaneSingle from './components/airplanes/airplane-single';
 import Incidents from './components/incidents/incidents';
 import Facts from './components/facts/facts';
 import Forum from './components/forum/forum';
-import About from './components/about/about';
 
 import registerServiceWorker from './registerServiceWorker';
 
@@ -39,7 +38,6 @@ const Root = () => {
           <Route path="/incidents" component={Incidents} />
           <Route path="/facts" component={Facts} />
           <Route path="/forum" component={Forum} />
-          <Route path="/about" component={About} />
         </div>
       </Router>
     </Provider>
