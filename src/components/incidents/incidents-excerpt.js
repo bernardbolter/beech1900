@@ -1,6 +1,7 @@
 import React from 'react';
 import { observer } from 'mobx-react';
 import { Link } from 'react-router-dom';
+import Lightbox from 'react-images';
 
 import './incidents-excerpt.sass';
 
@@ -28,7 +29,8 @@ export default class IncidentExcerpt extends React.Component {
             <p className="incident-editorial-synopsis"><span className="incident-span">Synopsis</span>{this.props.editorial}</p>
             {this.props.ntsbreportNumber ? <p className="incident-ntsb-number"><span className="incident-span">NTSB Report Number</span>{this.props.ntsbreportNumber}</p> : null }
             {this.props.otherReport ? <p className="incident-other-report"><span className="incident-span">Other Report</span>{this.props.otherReport}</p> : null }
-            {this.props.additionalInfo ? <p className="incident-additional-information"><span className="incident-span">Aditional Information</span>{this.props.additionalInfo}</p> : null }
+            {this.props.additionalInfo ? this._renderAdditionalLink() : null }
+            {this._renderImage()}
           </div>
         </div>
     );
@@ -38,6 +40,29 @@ export default class IncidentExcerpt extends React.Component {
       return <p className="incident-serial"><span className="incident-span">Serial Number</span>{this.props.serial}</p>;
     } else {
       return <Link to={`/airplanes/${this.props.serial}`} className="incidents-link"><p className="incident-serial"><img src={`${process.env.PUBLIC_URL}/link.png`} alt="Link Graphic" /><span className="incident-span">Serial Number</span>{this.props.serial}</p></Link>;
+    }
+  }
+
+  _renderAdditionalLink = () => {
+    var testIfLink = this.props.additionalInfo.substring(0,4);
+    if (testIfLink === "http") {
+      return (
+        <a href={this.props.additionalInfo}><p className="incident-additional-information"><span className="incident-span">Aditional Information</span>{this.props.additionalInfo}</p></a>
+      )
+    } else {
+      return (
+          <p className="incident-additional-information"><span className="incident-span">Aditional Information</span>{this.props.additionalInfo}</p>
+      )
+    }
+  }
+
+  _renderImage = () => {
+    if (this.props.image) {
+      return (
+        <a className="incident-image" onClick={this._lightboxImage}><img src={`${process.env.PUBLIC_URL}/${this.props.image}`} alt="the incident" /></a>
+      )
+    } else {
+      return null;
     }
   }
 }

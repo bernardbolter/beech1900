@@ -13,22 +13,24 @@ export default class About extends React.Component {
     return (
       <section>
       <Header match={this.props.match} />
-        <div className="home-text">
-          <h1>Welcome to Beech1900.com! This website is an active database of information about this turboprop airline which was produced between 1984 and 2002. You'll find it a comprehensive and reliable provider of information, meant to be shared with my fellow aviation enthusiasts.</h1>
-          <h1>In 2006, former Captain and aviation enthusiast Aaron Kahn came up with this idea and started keeping track of the movements and statuses of all the Beech 1900s. Aaron’s hope is that you’ll enjoy this website and share it with your friends.</h1>
-          <p>below are the top rankings of the stats</p>
-        </div>
-        <div className="home-grid">
-          {this._makeGridRow("currentStatus")}
-          {this._makeGridRow("airplaneProduction")}
-          {this._makeGridRow("latestOperator")}
-          {this._makeGridRow("latestCountry")}
-          {this._makeGridRow("serial")}
-          {this._makeGridRow("accidentType")}
-        </div>
-        <div className="home-footer">
-          <p>all rights reserved - {new Date().getFullYear()}</p>
-        </div>
+      <section className={this.props.store.toggleMenu ? "home home-open" : "home"}>
+          <div className="home-text">
+            <h1>Welcome to Beech1900.com! This website is an active database of information about this turboprop airline which was produced between 1984 and 2002. You'll find it a comprehensive and reliable provider of information, meant to be shared with my fellow aviation enthusiasts.</h1>
+            <h1>In 2006, former Captain and aviation enthusiast Aaron Kahn came up with this idea and started keeping track of the movements and statuses of all the Beech 1900s. Aaron’s hope is that you’ll enjoy this website and share it with your friends.</h1>
+            <p>below are the top rankings of the stats</p>
+          </div>
+          <div className="home-grid">
+            {this._makeGridRow("currentStatus")}
+            {this._makeGridRow("airplaneProduction")}
+            {this._makeGridRow("latestOperator")}
+            {this._makeGridRow("latestCountry")}
+            {this._makeGridRow("serial")}
+            {this._makeGridRow("accidentType")}
+          </div>
+          <div className="home-footer">
+            <p>Beech1900.com | all rights reserved - {new Date().getFullYear()}</p>
+          </div>
+        </section>
       </section>
     );
   }

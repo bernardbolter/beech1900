@@ -1,10 +1,19 @@
 @import '../../variables.scss'
 
+.home
+  transform: translateY(0px)
+  transition: all 0.3s ease-in
+
+.home-open
+  transform: translateY(191px)
+  transition: all 0.3s ease-in
+
 .home-text
   width: 100%
   margin: 0
-  padding: 10px 0 30px
+  padding: 10px 0 50px
   background: $light-sky
+
 
   h1
     width: 90%
@@ -14,12 +23,13 @@
     line-height: 1.5
     font-weight: 300
     text-indent: 20px
+    opacity: 0.75
 
     @media screen and (min-width: 950px)
-      width: 70%
+      width: 50%
       margin: 15px auto
       color: $dark-color
-      font-size: 20px
+      font-size: 16px
       line-height: 1.5
       font-weight: 300
       text-indent: 20px
@@ -29,11 +39,12 @@
     font-size: 10px
     color: $dark-color
     font-weight: 400
-    top: 20px
+    top: 30px
     position: relative
+    opacity: 0.5
 
     @media screen and (min-width: 950px)
-      margin: 0 0 0 15%
+      margin: 0 0 0 25%
       font-size: 13px
 
 .home-grid
@@ -95,22 +106,22 @@
     text-align: center
 
 .grid-cell-header-currentStatus
-  background-color: $home-first
+  background-color: darken($home-first, 20%)
 
 .grid-cell-header-airplaneProduction
-  background-color: $home-second
+  background-color: darken($home-second, 20%)
 
 .grid-cell-header-latestOperator
-  background-color: $home-third
+  background-color: darken($home-third, 20%)
 
 .grid-cell-header-latestCountry
-  background-color: $home-fourth
+  background-color: darken($home-fourth, 20%)
 
 .grid-cell-header-serial
-  background-color: $home-fifth
+  background-color: darken($home-fifth, 20%)
 
 .grid-cell-header-accidentType
-  background-color: $home-sixth
+  background-color: darken($home-sixth, 20%)
 
 // GRID STYLES
 
@@ -156,22 +167,27 @@
   opacity: 0.75
 
 .grid-cell-currentStatus
-  background-color: lighten($home-first, 40%)
+  background-color: lighten($home-first, 45%)
 
 .grid-cell-airplaneProduction
-  background-color: lighten($home-second, 30%)
+  background-color: lighten($home-second, 35%)
+  border-right: 1px solid $light-gray
+  border-left: 1px solid $light-gray
 
 .grid-cell-latestOperator
-  background-color: lighten($home-third, 40%)
+  background-color: lighten($home-third, 45%)
+  border-right: 1px solid $light-gray
 
 .grid-cell-latestCountry
-  background-color: lighten($home-fourth, 40%)
+  background-color: lighten($home-fourth, 30%)
+  border-right: 1px solid $light-gray
 
 .grid-cell-serial
-  background-color: lighten($home-fifth, 40%)
+  background-color: lighten($home-fifth, 50%)
 
 .grid-cell-accidentType
-  background-color: lighten($home-sixth, 40%)
+  background-color: lighten($home-sixth, 20%)
+  border-left: 1px solid $light-gray
 
 .home-footer
   width: 100%
