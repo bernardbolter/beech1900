@@ -9,11 +9,13 @@
     "locationAirport": "EDDV",
     "fatalities": 0,
     "accidentType": "Other",
-    "editorial": "Mid-air collision at airshow with chase plane. Chase plane crashed. N305BH landed safely.",
+    "editorial":
+      "Mid-air collision at airshow with chase plane. Chase plane crashed. N305BH landed safely.",
     "ntsbreportNumber": "",
     "otherReport": "outside of US",
-    "additionalInfo": "http://aviation-safety.net/database/record.php?id=19840520-0",
-    "image" : "ub-9.jpg"
+    "additionalInfo":
+      "http://aviation-safety.net/database/record.php?id=19840520-0",
+    "image": "ub-9.jpg"
   },
   {
     "id": 2,
@@ -25,7 +27,8 @@
     "locationAirport": "PAHO",
     "fatalities": 18,
     "accidentType": "Other",
-    "editorial": "Loss of control on landing approach due to aft center of gravity",
+    "editorial":
+      "Loss of control on landing approach due to aft center of gravity",
     "ntsbreportNumber": "DCA88MA005",
     "otherReport": "NTSB AAR-88-11",
     "additionalInfo": ""
@@ -55,7 +58,8 @@
     "locationAirport": "KSYR",
     "fatalities": 0,
     "accidentType": "Ground Collision",
-    "editorial": "Ground collision with MU-2. The crew of the B1900 was at fault.",
+    "editorial":
+      "Ground collision with MU-2. The crew of the B1900 was at fault.",
     "ntsbreportNumber": "NYC89FA111B",
     "otherReport": "",
     "additionalInfo": ""
@@ -73,7 +77,8 @@
     "editorial": "No official data available",
     "ntsbreportNumber": "",
     "otherReport": "",
-    "additionalInfo": "http://aviation-safety.net/database/record.php?id=19900518-2"
+    "additionalInfo":
+      "http://aviation-safety.net/database/record.php?id=19900518-2"
   },
   {
     "id": 6,
@@ -88,7 +93,8 @@
     "editorial": "No official data available",
     "ntsbreportNumber": "",
     "otherReport": "",
-    "additionalInfo": "http://aviation-safety.net/database/record.php?id=19900821-1"
+    "additionalInfo":
+      "http://aviation-safety.net/database/record.php?id=19900821-1"
   },
   {
     "id": 7,
@@ -100,7 +106,8 @@
     "locationAirport": "n/a",
     "fatalities": 3,
     "accidentType": "Instrument Procedure",
-    "editorial": "Loss of control during night instrument approach on training flight.  Instructor lost altitude awareness.",
+    "editorial":
+      "Loss of control during night instrument approach on training flight.  Instructor lost altitude awareness.",
     "ntsbreportNumber": "NYC92FA053",
     "otherReport": "NTSB AAR-93-01-SUM",
     "additionalInfo": ""
@@ -115,7 +122,8 @@
     "locationAirport": "KSLK",
     "fatalities": 2,
     "accidentType": "Instrument Procedure",
-    "editorial": "Crashed during ILS approach.  Captain's approach was unstabilized and instrument cross-check was inadequate.",
+    "editorial":
+      "Crashed during ILS approach.  Captain's approach was unstabilized and instrument cross-check was inadequate.",
     "ntsbreportNumber": "DCA92MA016",
     "otherReport": "",
     "additionalInfo": ""
@@ -145,7 +153,8 @@
     "locationAirport": "KRSW",
     "fatalities": 0,
     "accidentType": "Unintentional Gear-Up",
-    "editorial": "Touched down with gear up, executed go-around, extended landing gear, normal landing",
+    "editorial":
+      "Touched down with gear up, executed go-around, extended landing gear, normal landing",
     "ntsbreportNumber": "MIA93LA044",
     "otherReport": "",
     "additionalInfo": ""
@@ -160,7 +169,8 @@
     "locationAirport": "KRIW",
     "fatalities": 0,
     "accidentType": "Ground Collision",
-    "editorial": "Captain mistakenly turned off the runway after landing, into a ditch instead of a taxiway",
+    "editorial":
+      "Captain mistakenly turned off the runway after landing, into a ditch instead of a taxiway",
     "ntsbreportNumber": "SEA93IA050",
     "otherReport": "",
     "additionalInfo": ""
@@ -748,7 +758,8 @@
     "editorial": "Airplane struck terrain at 5,000 feet MSL",
     "ntsbreportNumber": "",
     "otherReport": "",
-    "additionalInfo": "http://aviation-safety.net/database/record.php?id=19951207-0"
+    "additionalInfo":
+      "http://aviation-safety.net/database/record.php?id=19951207-0"
   },
   {
     "id": 51,
@@ -775,7 +786,8 @@
     "locationAirport": "KBDF",
     "fatalities": 0,
     "accidentType": "Other",
-    "editorial": "First Officer bounced landing. Captain took control but his go-around attempt resulted in the left wing striking the ground.",
+    "editorial":
+      "First Officer bounced landing. Captain took control but his go-around attempt resulted in the left wing striking the ground.",
     "ntsbreportNumber": "NYC96LA058",
     "otherReport": "",
     "additionalInfo": ""
@@ -1150,7 +1162,8 @@
     "locationAirport": "KUIN",
     "fatalities": 12,
     "accidentType": "Ground Collision",
-    "editorial": "Airline flight landing at non-towered airport collided with a Beech A90. The A90 was departing on a crossing runway and the 2 aircraft collided at the intersection of the runways.",
+    "editorial":
+      "Airline flight landing at non-towered airport collided with a Beech A90. The A90 was departing on a crossing runway and the 2 aircraft collided at the intersection of the runways.",
     "ntsbreportNumber": "DCA97MA009A",
     "otherReport": "NTSB AAR 97-04",
     "additionalInfo": ""
@@ -1465,7 +1478,8 @@
     "locationAirport": "KSEA",
     "fatalities": 0,
     "accidentType": "Other",
-    "editorial": "Crashed on landing due to stall/mush condition caused by improper and excessive cargo loading.",
+    "editorial":
+      "Crashed on landing due to stall/mush condition caused by improper and excessive cargo loading.",
     "ntsbreportNumber": "SEA97FA188",
     "otherReport": "",
     "additionalInfo": ""
@@ -1660,10 +1674,12 @@
     "locationAirport": "LFRH",
     "fatalities": 14,
     "accidentType": "Other",
-    "editorial": "Collided on approach with a C177. Both aircraft failed  to see and avoid each other in Class G airspace.",
+    "editorial":
+      "Collided on approach with a C177. Both aircraft failed  to see and avoid each other in Class G airspace.",
     "ntsbreportNumber": "",
     "otherReport": "",
-    "additionalInfo": "http://aviation-safety.net/database/record.php?id=19980730-1   BEA (French investigation agency ) Report F-JM980730"
+    "additionalInfo":
+      "http://aviation-safety.net/database/record.php?id=19980730-1   BEA (French investigation agency ) Report F-JM980730"
   },
   {
     "id": 112,
@@ -1690,7 +1706,8 @@
     "locationAirport": "KDEN",
     "fatalities": 0,
     "accidentType": "Other",
-    "editorial": "Erosion shield on #1 propeller blade shed during climb and punctured fuselage. 1 passenger slight shrapnel injury.",
+    "editorial":
+      "Erosion shield on #1 propeller blade shed during climb and punctured fuselage. 1 passenger slight shrapnel injury.",
     "ntsbreportNumber": "FTW98FA364",
     "otherReport": "",
     "additionalInfo": ""
@@ -1795,10 +1812,12 @@
     "locationAirport": "CYIF",
     "fatalities": 0,
     "accidentType": "Controlled Flight Into Terrain",
-    "editorial": "Controlled flight into terrain on non-precision approach in low visibity. Captain descended below minimum altitude without the runway in sight.",
+    "editorial":
+      "Controlled flight into terrain on non-precision approach in low visibity. Captain descended below minimum altitude without the runway in sight.",
     "ntsbreportNumber": "",
     "otherReport": "",
-    "additionalInfo": "http://aviation-safety.net/database/record.php?id=19990104-0 - Canada Transportation Safety Board Report A99Q0005"
+    "additionalInfo":
+      "http://aviation-safety.net/database/record.php?id=19990104-0 - Canada Transportation Safety Board Report A99Q0005"
   },
   {
     "id": 121,
@@ -1825,7 +1844,8 @@
     "locationAirport": "KHYA",
     "fatalities": 0,
     "accidentType": "Other",
-    "editorial": "PF intentionally selected BETA power 10 feet above ground. Hard landing",
+    "editorial":
+      "PF intentionally selected BETA power 10 feet above ground. Hard landing",
     "ntsbreportNumber": "NYC99LA052",
     "otherReport": "",
     "additionalInfo": ""
@@ -1855,7 +1875,8 @@
     "locationAirport": "PASM",
     "fatalities": 0,
     "accidentType": "Instrument Procedure",
-    "editorial": "Single-pilot descended through minimum altitude on non-precision approach, but did not recall doing so. May have been asleep.",
+    "editorial":
+      "Single-pilot descended through minimum altitude on non-precision approach, but did not recall doing so. May have been asleep.",
     "ntsbreportNumber": "ANC99FA028",
     "otherReport": "",
     "additionalInfo": ""
@@ -1873,7 +1894,8 @@
     "editorial": "Inadvertent wheels-up landing.",
     "ntsbreportNumber": "",
     "otherReport": "",
-    "additionalInfo": "http://aviation-safety.net/database/record.php?id=19990219-0"
+    "additionalInfo":
+      "http://aviation-safety.net/database/record.php?id=19990219-0"
   },
   {
     "id": 126,
@@ -1945,10 +1967,12 @@
     "locationAirport": "CYCV",
     "fatalities": 1,
     "accidentType": "Instrument Procedure",
-    "editorial": "Crew conducted a unauthorized GPS approach and impacted terrain prior to the runway.",
+    "editorial":
+      "Crew conducted a unauthorized GPS approach and impacted terrain prior to the runway.",
     "ntsbreportNumber": "",
     "otherReport": "outside of US",
-    "additionalInfo": "http://aviation-safety.net/database/record.php?id=19990812-0  Canada Transportation Safety Board Report A99Q0151"
+    "additionalInfo":
+      "http://aviation-safety.net/database/record.php?id=19990812-0  Canada Transportation Safety Board Report A99Q0151"
   },
   {
     "id": 131,
@@ -1960,7 +1984,8 @@
     "locationAirport": "KDSM",
     "fatalities": 0,
     "accidentType": "Ground Collision",
-    "editorial": "Deer strike on takeoff. Serious damage to right engine and side of airplane",
+    "editorial":
+      "Deer strike on takeoff. Serious damage to right engine and side of airplane",
     "ntsbreportNumber": "",
     "otherReport": "FAA",
     "additionalInfo": "FAA SDR MASA99146"
@@ -2128,7 +2153,8 @@
     "editorial": "No official data available",
     "ntsbreportNumber": "",
     "otherReport": "",
-    "additionalInfo": "http://aviation-safety.net/database/record.php?id=20000517-0"
+    "additionalInfo":
+      "http://aviation-safety.net/database/record.php?id=20000517-0"
   },
   {
     "id": 143,
@@ -2260,7 +2286,8 @@
     "locationAirport": "PABE",
     "fatalities": 0,
     "accidentType": "Runway Excursion",
-    "editorial": "Crew activated Nosewheel Steering during landing roll. Steering system was authorized for taxi only. Runway Excursion.",
+    "editorial":
+      "Crew activated Nosewheel Steering during landing roll. Steering system was authorized for taxi only. Runway Excursion.",
     "ntsbreportNumber": "ANC01FA011",
     "otherReport": "",
     "additionalInfo": ""
@@ -2398,7 +2425,8 @@
     "editorial": "No official data available",
     "ntsbreportNumber": "",
     "otherReport": "",
-    "additionalInfo": "http://aviation-safety.net/database/record.php?id=20010317-0"
+    "additionalInfo":
+      "http://aviation-safety.net/database/record.php?id=20010317-0"
   },
   {
     "id": 161,
@@ -2548,7 +2576,8 @@
     "editorial": "Aborted Takeoff after rotation",
     "ntsbreportNumber": "",
     "otherReport": "",
-    "additionalInfo": "http://aviation-safety.net/database/record.php?id=20010914-0"
+    "additionalInfo":
+      "http://aviation-safety.net/database/record.php?id=20010914-0"
   },
   {
     "id": 172,
@@ -2755,7 +2784,8 @@
     "locationAirport": "n/a",
     "fatalities": 3,
     "accidentType": "Controlled Flight Into Terrain",
-    "editorial": "Controlled flight into terrain on a visual flight rules arrival into M39.",
+    "editorial":
+      "Controlled flight into terrain on a visual flight rules arrival into M39.",
     "ntsbreportNumber": "FTW03FA059",
     "otherReport": "",
     "additionalInfo": ""
@@ -2800,7 +2830,8 @@
     "locationAirport": "KCLT",
     "fatalities": 21,
     "accidentType": "Other",
-    "editorial": "Loss of pitch control on takeoff, caused by incorrect rigging of the elevator. Compounded by improper loading resulting in a center of gravity aft of the certified limit.",
+    "editorial":
+      "Loss of pitch control on takeoff, caused by incorrect rigging of the elevator. Compounded by improper loading resulting in a center of gravity aft of the certified limit.",
     "ntsbreportNumber": "DCA03MA022",
     "otherReport": "NTSB AAR 04-01",
     "additionalInfo": ""
@@ -2878,7 +2909,8 @@
     "editorial": "Aborted Takeoff; Runway Excursion",
     "ntsbreportNumber": "",
     "otherReport": "",
-    "additionalInfo": "http://aviation-safety.net/database/record.php?id=20030319-0"
+    "additionalInfo":
+      "http://aviation-safety.net/database/record.php?id=20030319-0"
   },
   {
     "id": 194,
@@ -3025,7 +3057,8 @@
     "locationAirport": "KDEN",
     "fatalities": 0,
     "accidentType": "Door Open Inflight",
-    "editorial": "Forward airstair door opened inflight due to improper securing by FO",
+    "editorial":
+      "Forward airstair door opened inflight due to improper securing by FO",
     "ntsbreportNumber": "DEN03IA147",
     "otherReport": "",
     "additionalInfo": ""
@@ -3055,7 +3088,8 @@
     "locationAirport": "KHYA",
     "fatalities": 2,
     "accidentType": "Other",
-    "editorial": "Reversal of elevator trim system and subsequent loss of pitch control in the pitch-down direction. Caused by improper replacement of the elevator trim cable. Flightcrew did not verify proper operation of trim system prior to takeoff, which was required.",
+    "editorial":
+      "Reversal of elevator trim system and subsequent loss of pitch control in the pitch-down direction. Caused by improper replacement of the elevator trim cable. Flightcrew did not verify proper operation of trim system prior to takeoff, which was required.",
     "ntsbreportNumber": "NYC03MA183",
     "otherReport": "",
     "additionalInfo": ""
@@ -3133,7 +3167,8 @@
     "editorial": "No official data available",
     "ntsbreportNumber": "",
     "otherReport": "outside of US",
-    "additionalInfo": "http://aviation-safety.net/database/record.php?id=20040128-0"
+    "additionalInfo":
+      "http://aviation-safety.net/database/record.php?id=20040128-0"
   },
   {
     "id": 211,
@@ -3160,10 +3195,12 @@
     "locationAirport": "KXSD",
     "fatalities": 5,
     "accidentType": "Other",
-    "editorial": "Pilot incapacitation on approach due to sudden cardiac death. Pilot had lied about his health conditions multiple times.",
+    "editorial":
+      "Pilot incapacitation on approach due to sudden cardiac death. Pilot had lied about his health conditions multiple times.",
     "ntsbreportNumber": "",
     "otherReport": "US military",
-    "additionalInfo": "http://aviation-safety.net/database/record.php?id=200400316-0"
+    "additionalInfo":
+      "http://aviation-safety.net/database/record.php?id=200400316-0"
   },
   {
     "id": 213,
@@ -3268,7 +3305,8 @@
     "editorial": "Aborted Takeoff; Runway Excursion",
     "ntsbreportNumber": "",
     "otherReport": "",
-    "additionalInfo": "http://aviation-safety.net/database/record.php?id=200400906-0"
+    "additionalInfo":
+      "http://aviation-safety.net/database/record.php?id=200400906-0"
   },
   {
     "id": 220,
@@ -3310,7 +3348,8 @@
     "locationAirport": "MYNN",
     "fatalities": 0,
     "accidentType": "Other",
-    "editorial": "Ditched close to shore after running out of fuel. No serious injuries.",
+    "editorial":
+      "Ditched close to shore after running out of fuel. No serious injuries.",
     "ntsbreportNumber": "MIA05WA010",
     "otherReport": "",
     "additionalInfo": "http://www.aaipu-bcaa.com/PreliminaryReports/N79YV.pdf"
@@ -3475,7 +3514,8 @@
     "locationAirport": "KOGS",
     "fatalities": 0,
     "accidentType": "Ground Collision",
-    "editorial": "Wildlife collision during takeoff. Takeoff succesfully aborted but nosegear collapsed",
+    "editorial":
+      "Wildlife collision during takeoff. Takeoff succesfully aborted but nosegear collapsed",
     "ntsbreportNumber": "NYC06LA011",
     "otherReport": "",
     "additionalInfo": ""
@@ -3598,7 +3638,8 @@
     "editorial": "Nosegear collapsed on landing",
     "ntsbreportNumber": "",
     "otherReport": "",
-    "additionalInfo": "http://aviation-safety.net/database/record.php?id=20070107-0"
+    "additionalInfo":
+      "http://aviation-safety.net/database/record.php?id=20070107-0"
   },
   {
     "id": 242,
@@ -3715,10 +3756,12 @@
     "locationAirport": "NZWN",
     "fatalities": 0,
     "accidentType": "Landing Gear",
-    "editorial": "Intentional gear-up landing following complete loss of hydraulic fluid",
+    "editorial":
+      "Intentional gear-up landing following complete loss of hydraulic fluid",
     "ntsbreportNumber": "",
     "otherReport": "",
-    "additionalInfo": "http://aviation-safety.net/database/record.php?id=20070618-0"
+    "additionalInfo":
+      "http://aviation-safety.net/database/record.php?id=20070618-0"
   },
   {
     "id": 250,
@@ -3730,7 +3773,8 @@
     "locationAirport": "KLAR",
     "fatalities": 0,
     "accidentType": "Ground Collision",
-    "editorial": "failure to go-around, high-speed turnoff that resulted in propeller collision with an electrical box beside the runway",
+    "editorial":
+      "failure to go-around, high-speed turnoff that resulted in propeller collision with an electrical box beside the runway",
     "ntsbreportNumber": "DEN07LA101",
     "otherReport": "",
     "additionalInfo": ""
@@ -3748,7 +3792,8 @@
     "editorial": "Long landing followed by Runway Excursion",
     "ntsbreportNumber": "",
     "otherReport": "",
-    "additionalInfo": "http://aviation-safety.net/database/record.php?id=20070706-0"
+    "additionalInfo":
+      "http://aviation-safety.net/database/record.php?id=20070706-0"
   },
   {
     "id": 252,
@@ -3775,7 +3820,8 @@
     "locationAirport": "?",
     "fatalities": 0,
     "accidentType": "Inflight Engine Shutdown",
-    "editorial": "Inflight shutdown at 10,000' of engine due to low oil pressure",
+    "editorial":
+      "Inflight shutdown at 10,000' of engine due to low oil pressure",
     "ntsbreportNumber": "",
     "otherReport": "ASRS",
     "additionalInfo": "ACN: 760823"
@@ -3895,7 +3941,8 @@
     "locationAirport": "38ZA",
     "fatalities": 0,
     "accidentType": "Instrument Procedure",
-    "editorial": "Runway overrun on landing after landing in weather conditions that were below required minima.",
+    "editorial":
+      "Runway overrun on landing after landing in weather conditions that were below required minima.",
     "ntsbreportNumber": "SEA08LA082",
     "otherReport": "",
     "additionalInfo": ""
@@ -3913,7 +3960,8 @@
     "editorial": "Controlled flight into terrain",
     "ntsbreportNumber": "",
     "otherReport": "",
-    "additionalInfo": "http://aviation-safety.net/database/record.php?id=2000315-0"
+    "additionalInfo":
+      "http://aviation-safety.net/database/record.php?id=2000315-0"
   },
   {
     "id": 263,
@@ -3925,7 +3973,8 @@
     "locationAirport": "KPGA",
     "fatalities": 0,
     "accidentType": "Door Open Inflight",
-    "editorial": "Cargo door opened just after takeoff due to crew not noticing annunciator",
+    "editorial":
+      "Cargo door opened just after takeoff due to crew not noticing annunciator",
     "ntsbreportNumber": "SEA08IA096",
     "otherReport": "",
     "additionalInfo": ""
@@ -3958,7 +4007,8 @@
     "editorial": "Double engine failure (reason unknown)",
     "ntsbreportNumber": "",
     "otherReport": "",
-    "additionalInfo": "http://aviation-safety.net/database/record.php?id=20080502-0"
+    "additionalInfo":
+      "http://aviation-safety.net/database/record.php?id=20080502-0"
   },
   {
     "id": 266,
@@ -3985,7 +4035,8 @@
     "locationAirport": "KBIL",
     "fatalities": 1,
     "accidentType": "No Data",
-    "editorial": "Pilot failed to maintain control during the initial climb for unknown reasons.",
+    "editorial":
+      "Pilot failed to maintain control during the initial climb for unknown reasons.",
     "ntsbreportNumber": "SEA08FA135",
     "otherReport": "",
     "additionalInfo": ""
@@ -4003,7 +4054,8 @@
     "editorial": "No official data available",
     "ntsbreportNumber": "",
     "otherReport": "",
-    "additionalInfo": "http://aviation-safety.net/database/record.php?id=20080901-0"
+    "additionalInfo":
+      "http://aviation-safety.net/database/record.php?id=20080901-0"
   },
   {
     "id": 269,
@@ -4015,7 +4067,8 @@
     "locationAirport": "KALB",
     "fatalities": 0,
     "accidentType": "Inflight Engine Shutdown",
-    "editorial": "Reported inflight engine failure. Diverted to KALB. All 4 main tires blew on landing.",
+    "editorial":
+      "Reported inflight engine failure. Diverted to KALB. All 4 main tires blew on landing.",
     "ntsbreportNumber": "",
     "otherReport": "none",
     "additionalInfo": "https://aviation-safety.net/wikibase/wiki.php?id=58513"
@@ -4063,7 +4116,8 @@
     "editorial": "No official data available",
     "ntsbreportNumber": "",
     "otherReport": "",
-    "additionalInfo": "http://aviation-safety.net/database/record.php?id=20091109-0"
+    "additionalInfo":
+      "http://aviation-safety.net/database/record.php?id=20091109-0"
   },
   {
     "id": 273,
@@ -4090,7 +4144,8 @@
     "locationAirport": "NZAA",
     "fatalities": 0,
     "accidentType": "Door Open Inflight",
-    "editorial": "Cargo door was not properly secured and opened just after takeoff. Warning light was deferred.",
+    "editorial":
+      "Cargo door was not properly secured and opened just after takeoff. Warning light was deferred.",
     "ntsbreportNumber": "",
     "otherReport": "taic.org.nz",
     "additionalInfo": ""
@@ -4240,7 +4295,8 @@
     "locationAirport": "PASI",
     "fatalities": 0,
     "accidentType": "Other",
-    "editorial": "Lightning strike blinded the Captain and damaged the right elevator",
+    "editorial":
+      "Lightning strike blinded the Captain and damaged the right elevator",
     "ntsbreportNumber": "ANC11LA004",
     "otherReport": "",
     "additionalInfo": ""
@@ -4255,10 +4311,12 @@
     "locationAirport": "OPKC",
     "fatalities": 21,
     "accidentType": "Inflight Engine Shutdown",
-    "editorial": "Crashed while returning to departure airport. An engine failure was reported.",
+    "editorial":
+      "Crashed while returning to departure airport. An engine failure was reported.",
     "ntsbreportNumber": "",
     "otherReport": "",
-    "additionalInfo": "http://aviation-safety.net/database/record.php?id=20101105-0"
+    "additionalInfo":
+      "http://aviation-safety.net/database/record.php?id=20101105-0"
   },
   {
     "id": 286,
@@ -4270,7 +4328,8 @@
     "locationAirport": "?",
     "fatalities": 0,
     "accidentType": "Inflight Engine Shutdown",
-    "editorial": "1 engine shutdown at 7,000' due to low oil pressure. Cargo operator",
+    "editorial":
+      "1 engine shutdown at 7,000' due to low oil pressure. Cargo operator",
     "ntsbreportNumber": "",
     "otherReport": "ASRS",
     "additionalInfo": "ACN: 927050"
@@ -4303,7 +4362,8 @@
     "editorial": "No official data available",
     "ntsbreportNumber": "",
     "otherReport": "",
-    "additionalInfo": "http://aviation-safety.net/database/record.php?id=20101203-0"
+    "additionalInfo":
+      "http://aviation-safety.net/database/record.php?id=20101203-0"
   },
   {
     "id": 289,
@@ -4318,7 +4378,8 @@
     "editorial": "Runway Excursion on landing",
     "ntsbreportNumber": "",
     "otherReport": "",
-    "additionalInfo": "http://aviation-safety.net/database/record.php?id=20110209-0"
+    "additionalInfo":
+      "http://aviation-safety.net/database/record.php?id=20110209-0"
   },
   {
     "id": 290,
@@ -4360,7 +4421,8 @@
     "locationAirport": "KDEN",
     "fatalities": 0,
     "accidentType": "Landing Gear",
-    "editorial": "Left main landing gear collapsed on landing - mechanical failure",
+    "editorial":
+      "Left main landing gear collapsed on landing - mechanical failure",
     "ntsbreportNumber": "CEN11IA341",
     "otherReport": "",
     "additionalInfo": ""
@@ -4423,7 +4485,8 @@
     "editorial": "Fuel exhaustion?",
     "ntsbreportNumber": "",
     "otherReport": "",
-    "additionalInfo": "https://aviation-safety.net/database/record.php?id=20111130-0"
+    "additionalInfo":
+      "https://aviation-safety.net/database/record.php?id=20111130-0"
   },
   {
     "id": 297,
@@ -4480,7 +4543,8 @@
     "locationAirport": "CYCP",
     "fatalities": 0,
     "accidentType": "Runway Excursion",
-    "editorial": "Landing gear contacted snow bank on side of runway. Approach continued though weather was below minima.",
+    "editorial":
+      "Landing gear contacted snow bank on side of runway. Approach continued though weather was below minima.",
     "ntsbreportNumber": "",
     "otherReport": "Canada",
     "additionalInfo": "TSB Accident ID: A12P0034"
@@ -4510,7 +4574,8 @@
     "locationAirport": "PAMC",
     "fatalities": 0,
     "accidentType": "Other",
-    "editorial": "Tailstrike upon landing due to unstable approach and over-flare",
+    "editorial":
+      "Tailstrike upon landing due to unstable approach and over-flare",
     "ntsbreportNumber": "ANC12CA042",
     "otherReport": "",
     "additionalInfo": ""
@@ -4600,10 +4665,12 @@
     "locationAirport": "no ICAO code",
     "fatalities": 0,
     "accidentType": "CFIT",
-    "editorial": "Aircraft hit the ground short of runway for unknown reasons. Upon impact, all undercarriage were sheared off, aircraft skidded for about 200 metres before coming to rest with all propeller blades separated. All 17 occupants evacuated.",
+    "editorial":
+      "Aircraft hit the ground short of runway for unknown reasons. Upon impact, all undercarriage were sheared off, aircraft skidded for about 200 metres before coming to rest with all propeller blades separated. All 17 occupants evacuated.",
     "ntsbreportNumber": "",
     "otherReport": "",
-    "additionalInfo": "http://www.baaa-acro.com/Fiches%20d'accidents/2012/TT-ABB.htm"
+    "additionalInfo":
+      "http://www.baaa-acro.com/Fiches%20d'accidents/2012/TT-ABB.htm"
   },
   {
     "id": 309,
@@ -4645,7 +4712,8 @@
     "locationAirport": "?",
     "fatalities": 0,
     "accidentType": "Runway Excursion",
-    "editorial": "Nosegear collapsed on landing after departing the side of the runway on landing",
+    "editorial":
+      "Nosegear collapsed on landing after departing the side of the runway on landing",
     "ntsbreportNumber": "",
     "otherReport": "ASRS",
     "additionalInfo": "ACN: 1071503"
@@ -4675,7 +4743,8 @@
     "locationAirport": "FPST",
     "fatalities": 1,
     "accidentType": "No Data",
-    "editorial": "Positioning flight; airplane and pilot missing and presumed lost.",
+    "editorial":
+      "Positioning flight; airplane and pilot missing and presumed lost.",
     "ntsbreportNumber": "",
     "otherReport": "",
     "additionalInfo": ""
@@ -4720,7 +4789,8 @@
     "locationAirport": "KTEX",
     "fatalities": 0,
     "accidentType": "Landing Gear",
-    "editorial": "Gear collapsed on landing due to failure of gear assembly to lock",
+    "editorial":
+      "Gear collapsed on landing due to failure of gear assembly to lock",
     "ntsbreportNumber": "DCA13FA148",
     "otherReport": "",
     "additionalInfo": ""
@@ -4750,7 +4820,8 @@
     "locationAirport": "CZMD",
     "fatalities": 0,
     "accidentType": "Ground Collision",
-    "editorial": "Baggage cart blew into standing aircraft. Engines running. Heavy damage both engines",
+    "editorial":
+      "Baggage cart blew into standing aircraft. Engines running. Heavy damage both engines",
     "ntsbreportNumber": "",
     "otherReport": "[Canada] CADORS 2013O3427",
     "additionalInfo": ""
@@ -4825,7 +4896,8 @@
     "locationAirport": "?",
     "fatalities": 0,
     "accidentType": "Other",
-    "editorial": "Pilot assumed ground crew would remove inlet covers, but they did not. Covers were ingested upon engine start but did not interfere with operations.",
+    "editorial":
+      "Pilot assumed ground crew would remove inlet covers, but they did not. Covers were ingested upon engine start but did not interfere with operations.",
     "ntsbreportNumber": "",
     "otherReport": "ASRS",
     "additionalInfo": "ACN: 1150063"
@@ -4840,7 +4912,8 @@
     "locationAirport": "SLED",
     "fatalities": 0,
     "accidentType": "Other",
-    "editorial": "Landed short and hit approach lights. No injuries. Airplane taxied off the runway under its own power.",
+    "editorial":
+      "Landed short and hit approach lights. No injuries. Airplane taxied off the runway under its own power.",
     "ntsbreportNumber": "",
     "otherReport": "Bolivia",
     "additionalInfo": "aviacol.net"
@@ -5008,7 +5081,8 @@
     "editorial": "serial number unknown",
     "ntsbreportNumber": "",
     "otherReport": "Myanmar",
-    "additionalInfo": "https://aviation-safety.net/database/record.php?id=20160210-0"
+    "additionalInfo":
+      "https://aviation-safety.net/database/record.php?id=20160210-0"
   },
   {
     "id": 336,
@@ -5038,7 +5112,8 @@
     "editorial": "Hard landing",
     "ntsbreportNumber": "",
     "otherReport": "Canada",
-    "additionalInfo": "https://aviation-safety.net/database/record.php?id=20160420-0"
+    "additionalInfo":
+      "https://aviation-safety.net/database/record.php?id=20160420-0"
   },
   {
     "id": 338,
@@ -5068,7 +5143,8 @@
     "editorial": "Landed \"gear up",
     "ntsbreportNumber": "",
     "otherReport": "Bahamas",
-    "additionalInfo": "https://aviation-safety.net/database/record.php?id=20160930-1"
+    "additionalInfo":
+      "https://aviation-safety.net/database/record.php?id=20160930-1"
   },
   {
     "id": 340,

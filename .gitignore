@@ -6,6 +6,9 @@
 # testing
 /coverage
 
+#flags
+/public/flags
+
 # production
 /build
 

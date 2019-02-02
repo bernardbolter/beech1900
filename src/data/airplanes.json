@@ -11260,7 +11260,8 @@
     "event10Reg": "YV-1674",
     "event10Owner": "Servicio Panamericano de Proteccion",
     "event10Operator": "Servicio Panamericano de Proteccion",
-    "event10Comment": "new owner&operator; re-registered; imported to Venezuela",
+    "event10Comment":
+      "new owner&operator; re-registered; imported to Venezuela",
     "event11Date": "",
     "event11Reg": "",
     "event11Owner": "",
@@ -12064,7 +12065,8 @@
     "event7Reg": "ZK-VAE",
     "event7Owner": "Vincent Aviation",
     "event7Operator": "Vincent Aviation",
-    "event7Comment": "new owner&operator; re-registered; imported to New Zealand",
+    "event7Comment":
+      "new owner&operator; re-registered; imported to New Zealand",
     "event8Date": "11-Oct-04",
     "event8Reg": "ZK-VAE",
     "event8Owner": "Vincent Aviation",
@@ -13626,7 +13628,8 @@
     "event10Reg": "ZS-PZZ",
     "event10Owner": "Stratovest",
     "event10Operator": "?",
-    "event10Comment": "new owner&operator; re-registered; imported to S. Africa",
+    "event10Comment":
+      "new owner&operator; re-registered; imported to S. Africa",
     "event11Date": "",
     "event11Reg": "",
     "event11Owner": "",
@@ -13732,7 +13735,8 @@
     "event13Reg": "ZS-PHL",
     "event13Owner": "Aircraft Africa Consultants",
     "event13Operator": "?",
-    "event13Comment": "new owner&operator; re-registered; imported to S. Africa",
+    "event13Comment":
+      "new owner&operator; re-registered; imported to S. Africa",
     "event14Date": "",
     "event14Reg": "",
     "event14Owner": "",
@@ -16417,7 +16421,8 @@
     "event4Reg": "VQ-TBL",
     "event4Owner": "Skyking Airlines",
     "event4Operator": "Skyking Airlines",
-    "event4Comment": "new owner&operator; re-registered; imported to Turks & Caicos",
+    "event4Comment":
+      "new owner&operator; re-registered; imported to Turks & Caicos",
     "event5Date": "",
     "event5Reg": "",
     "event5Owner": "",
@@ -19875,7 +19880,8 @@
     "event4Reg": "S9-CAE",
     "event4Owner": "?",
     "event4Operator": "SAL Express",
-    "event4Comment": "new owner&operator; re-registered; imported to Sao Tome & Principe",
+    "event4Comment":
+      "new owner&operator; re-registered; imported to Sao Tome & Principe",
     "event5Date": "",
     "event5Reg": "",
     "event5Owner": "",
@@ -23475,7 +23481,8 @@
     "event14Owner": "",
     "event14Operator": "",
     "event14Comment": "",
-    "notes": "Prototype. Converted from UC-82; Shown at Beech factory in Wichita, no engines"
+    "notes":
+      "Prototype. Converted from UC-82; Shown at Beech factory in Wichita, no engines"
   },
   {
     "id": 259,
@@ -27322,12 +27329,14 @@
     "event1Reg": "OK-YES",
     "event1Owner": "TOP Air",
     "event1Operator": "TOP Air",
-    "event1Comment": "new owner&operator; re-registered; imported to Czechoslavakia",
+    "event1Comment":
+      "new owner&operator; re-registered; imported to Czechoslavakia",
     "event2Date": "1-Sep-98",
     "event2Reg": "PH-ACY",
     "event2Owner": "ACE Air Charters",
     "event2Operator": "ACE Air Charters",
-    "event2Comment": "new owner&operator; re-registered; imported to Netherlands",
+    "event2Comment":
+      "new owner&operator; re-registered; imported to Netherlands",
     "event3Date": "?",
     "event3Reg": "PH-ACY",
     "event3Owner": "?",
@@ -28151,7 +28160,8 @@
     "event3Reg": "ZK-JNG",
     "event3Owner": "Eagle Airways",
     "event3Operator": "Eagle Airways",
-    "event3Comment": "new owner&operator; re-registered; imported to New Zealand",
+    "event3Comment":
+      "new owner&operator; re-registered; imported to New Zealand",
     "event4Date": "1-Mar-02",
     "event4Reg": "VH-RUE",
     "event4Owner": "Hawker Pacific",
@@ -29703,7 +29713,8 @@
     "event4Reg": "PH-RNG",
     "event4Owner": "Orange Aircraft Leasing",
     "event4Operator": "Jetisfaction",
-    "event4Comment": "new owner&operator; re-registered; imported to Netherlands",
+    "event4Comment":
+      "new owner&operator; re-registered; imported to Netherlands",
     "event5Date": "",
     "event5Reg": "",
     "event5Owner": "",
@@ -41528,7 +41539,8 @@
     "event3Reg": "ZS-OYE",
     "event3Owner": "National Airways Beechcraft Sales",
     "event3Operator": "National Airways",
-    "event3Comment": "new owner&operator; re-registered; imported to South Africa",
+    "event3Comment":
+      "new owner&operator; re-registered; imported to South Africa",
     "event4Date": "",
     "event4Reg": "",
     "event4Owner": "",
@@ -43525,7 +43537,8 @@
     "event2Reg": "VQ-TVC",
     "event2Owner": "Skyking",
     "event2Operator": "Skyking",
-    "event2Comment": "new owner&operator; re-registered; imported to Turks & Caicos",
+    "event2Comment":
+      "new owner&operator; re-registered; imported to Turks & Caicos",
     "event3Date": "1-Jun-10",
     "event3Reg": "N789BL",
     "event3Owner": "Paradise TCI",
@@ -49546,7 +49559,8 @@
     "event5Reg": "HB-AEN",
     "event5Owner": "Switzerland Air Force",
     "event5Operator": "Switzerland Air Force",
-    "event5Comment": "new owner&operator; re-registered; imported to Switzerland",
+    "event5Comment":
+      "new owner&operator; re-registered; imported to Switzerland",
     "event6Date": "",
     "event6Reg": "",
     "event6Owner": "",
@@ -50264,7 +50278,8 @@
     "event3Reg": "HB-AEK",
     "event3Owner": "Zimex Aviation",
     "event3Operator": "Zimex Aviation",
-    "event3Comment": "new owner&operator; re-registered; imported to Switzerland",
+    "event3Comment":
+      "new owner&operator; re-registered; imported to Switzerland",
     "event4Date": "",
     "event4Reg": "",
     "event4Owner": "",
@@ -56078,7 +56093,8 @@
     "event1Reg": "PH-RNH",
     "event1Owner": "Jetisfaction",
     "event1Operator": "Jetisfaction",
-    "event1Comment": "new owner&operator; re-registered; imported to Netherlands",
+    "event1Comment":
+      "new owner&operator; re-registered; imported to Netherlands",
     "event2Date": "18-Jun-02",
     "event2Reg": "PK-TVL",
     "event2Owner": "Travira Air",
@@ -56351,7 +56367,8 @@
     "event1Reg": "ZK-EAQ",
     "event1Owner": "Eagle Airways",
     "event1Operator": "Eagle Airways",
-    "event1Comment": "new owner&operator; re-registered; imported to New Zealand",
+    "event1Comment":
+      "new owner&operator; re-registered; imported to New Zealand",
     "event2Date": "",
     "event2Reg": "",
     "event2Owner": "",
@@ -57170,7 +57187,8 @@
     "event1Reg": "PH-RAR",
     "event1Owner": "Rossair",
     "event1Operator": "Euromanx",
-    "event1Comment": "new owner&operator; re-registered; imported to Netherlands",
+    "event1Comment":
+      "new owner&operator; re-registered; imported to Netherlands",
     "event2Date": "?",
     "event2Reg": "PH-RAR",
     "event2Owner": "Trans Travel Airlines",
@@ -58358,7 +58376,8 @@
     "event2Reg": "HB-AEL",
     "event2Owner": "Zimex Aviation",
     "event2Operator": "Arab Wings Co",
-    "event2Comment": "new owner&operator; re-registered; imported to Switzerland",
+    "event2Comment":
+      "new owner&operator; re-registered; imported to Switzerland",
     "event3Date": "",
     "event3Reg": "",
     "event3Owner": "",
@@ -58636,7 +58655,8 @@
     "event3Reg": "ZK-EAR",
     "event3Owner": "Eagle Airways",
     "event3Operator": "Eagle Airways",
-    "event3Comment": "new owner&operator; re-registered; imported to New Zealand",
+    "event3Comment":
+      "new owner&operator; re-registered; imported to New Zealand",
     "event4Date": "",
     "event4Reg": "",
     "event4Owner": "",
@@ -61786,7 +61806,8 @@
     "event14Owner": "",
     "event14Operator": "",
     "event14Comment": "",
-    "notes": "Corporate transport for Tenax Aerospace defense company Ridgeland MS"
+    "notes":
+      "Corporate transport for Tenax Aerospace defense company Ridgeland MS"
   },
   {
     "id": 680,
@@ -62696,7 +62717,8 @@
     "event14Owner": "",
     "event14Operator": "",
     "event14Comment": "",
-    "notes": "photos showing ZS-EAI but not in SA Civil Register as of 15 Nov 16"
+    "notes":
+      "photos showing ZS-EAI but not in SA Civil Register as of 15 Nov 16"
   },
   {
     "id": 690,

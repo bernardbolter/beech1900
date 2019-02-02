@@ -49,9 +49,15 @@ class Store {
   // Facts Data
   @observable factsData = facts;
 
-  @computed get filteredAirplanes() {
+  @computed
+  get filteredAirplanes() {
     const matchesFilter = new RegExp(this.airplaneFilter, 'i');
-    let airplaneFiltered = this.airplaneData.filter(airplane => !this.airplaneFilter || matchesFilter.test(airplane.serial) || matchesFilter.test(airplane.latestReg));
+    let airplaneFiltered = this.airplaneData.filter(
+      airplane =>
+        !this.airplaneFilter ||
+        matchesFilter.test(airplane.serial) ||
+        matchesFilter.test(airplane.latestReg)
+    );
     let airplaneSorted = [];
     let airplaneType = [];
     let airplaneStatus = [];
@@ -91,42 +97,73 @@ class Store {
       airplaneUE = airplaneFiltered.filter(plane => plane.serial.match(/^UE/));
     }
 
-    airplaneType = airplaneUA.concat(airplaneUB, airplaneUC, airplaneUD, airplaneUE);
+    airplaneType = airplaneUA.concat(
+      airplaneUB,
+      airplaneUC,
+      airplaneUD,
+      airplaneUE
+    );
 
-
-    if (this.uaChecked === false && this.ubChecked === false && this.ucChecked === false && this.udChecked === false && this.ueChecked === false) {
+    if (
+      this.uaChecked === false &&
+      this.ubChecked === false &&
+      this.ucChecked === false &&
+      this.udChecked === false &&
+      this.ueChecked === false
+    ) {
       airplaneType = airplaneFiltered;
     }
 
     // FILTER LIST BY CURRENT STATUS
 
-    if (this.operatingChecked === true ) {
-      airplaneOperating = airplaneType.filter(plane => plane.currentStatus.match(/^Operating$/));
+    if (this.operatingChecked === true) {
+      airplaneOperating = airplaneType.filter(plane =>
+        plane.currentStatus.match(/^Operating$/)
+      );
     }
 
-    if (this.operatingNonCurrentChecked === true ) {
-      airplaneOperatingNonCurrent = airplaneType.filter(plane => plane.currentStatus.match(/Non-Current/));
+    if (this.operatingNonCurrentChecked === true) {
+      airplaneOperatingNonCurrent = airplaneType.filter(plane =>
+        plane.currentStatus.match(/Non-Current/)
+      );
     }
 
-    if (this.nonFlyingChecked === true ) {
-      airplaneNonFlying = airplaneType.filter(plane => plane.currentStatus.match(/^Non-Flying/));
+    if (this.nonFlyingChecked === true) {
+      airplaneNonFlying = airplaneType.filter(plane =>
+        plane.currentStatus.match(/^Non-Flying/)
+      );
     }
 
-    if (this.partedOutChecked === true ) {
-      airplanePartedOut = airplaneType.filter(plane => plane.currentStatus.match(/^Parted/));
+    if (this.partedOutChecked === true) {
+      airplanePartedOut = airplaneType.filter(plane =>
+        plane.currentStatus.match(/^Parted/)
+      );
     }
 
-    if (this.destroyedChecked === true ) {
-      airplaneDestroyed = airplaneType.filter(plane => plane.currentStatus.match(/^Destroyed/));
+    if (this.destroyedChecked === true) {
+      airplaneDestroyed = airplaneType.filter(plane =>
+        plane.currentStatus.match(/^Destroyed/)
+      );
     }
 
-    airplaneStatus = airplaneOperating.concat(airplaneOperatingNonCurrent, airplaneNonFlying, airplanePartedOut, airplaneDestroyed);
+    airplaneStatus = airplaneOperating.concat(
+      airplaneOperatingNonCurrent,
+      airplaneNonFlying,
+      airplanePartedOut,
+      airplaneDestroyed
+    );
 
-    if (this.operatingChecked === false && this.operatingNonCurrentChecked === false && this.nonFlyingChecked === false && this.partedOutChecked === false && this.destroyedChecked === false ) {
+    if (
+      this.operatingChecked === false &&
+      this.operatingNonCurrentChecked === false &&
+      this.nonFlyingChecked === false &&
+      this.partedOutChecked === false &&
+      this.destroyedChecked === false
+    ) {
       airplaneStatus = airplaneType;
     }
 
-    airplaneStatus.sort( function(a, b) {
+    airplaneStatus.sort(function(a, b) {
       return a.id - b.id;
     });
 
@@ -136,20 +173,26 @@ class Store {
       airplaneCountry = airplaneStatus;
     } else {
       const theCountry = new RegExp(this.countryValue);
-      airplaneCountry = airplaneStatus.filter(plane => plane.latestCountry.match(theCountry));
+      airplaneCountry = airplaneStatus.filter(plane =>
+        plane.latestCountry.match(theCountry)
+      );
     }
 
-
-    if (this.operatorValue === null || this.operatorValue === 'Select Latest Operator') {
+    if (
+      this.operatorValue === null ||
+      this.operatorValue === 'Select Latest Operator'
+    ) {
       airplaneOperator = airplaneCountry;
     } else {
       const theOperator = new RegExp(this.operatorValue);
-      airplaneOperator = airplaneCountry.filter(plane => plane.latestOperator.match(theOperator));
+      airplaneOperator = airplaneCountry.filter(plane =>
+        plane.latestOperator.match(theOperator)
+      );
     }
 
     airplaneDrop = airplaneOperator;
 
-    airplaneDrop.sort( function(a, b) {
+    airplaneDrop.sort(function(a, b) {
       return a.id - b.id;
     });
 
@@ -168,28 +211,38 @@ class Store {
     return airplaneResults;
   }
 
-
-  @action getSingleAirplaneData(serial) {
-    const singlularDataObject = this.airplaneData.filter(x => x.serial === serial);
+  @action
+  getSingleAirplaneData(serial) {
+    const singlularDataObject = this.airplaneData.filter(
+      x => x.serial === serial
+    );
     const singularDataArray = [];
     for (var key in singlularDataObject[0]) {
-        if (singlularDataObject[0].hasOwnProperty(key)) {
-            singularDataArray[key] = singlularDataObject[0][key];
-        }
+      if (singlularDataObject[0].hasOwnProperty(key)) {
+        singularDataArray[key] = singlularDataObject[0][key];
+      }
     }
     return singularDataArray;
   }
 
-  @computed get filteredIncidents() {
+  @computed
+  get filteredIncidents() {
     const matchesIncidentsFilter = new RegExp(this.incidentsFilter, 'i');
-    let incidentsFiltered = this.incidentsData.filter(incident => !this.incidentsFilter || matchesIncidentsFilter.test(incident.registration) || matchesIncidentsFilter.test(incident.locationCity) ||matchesIncidentsFilter.test(incident.operator) || matchesIncidentsFilter.test(incident.locationAirport));
+    let incidentsFiltered = this.incidentsData.filter(
+      incident =>
+        !this.incidentsFilter ||
+        matchesIncidentsFilter.test(incident.registration) ||
+        matchesIncidentsFilter.test(incident.locationCity) ||
+        matchesIncidentsFilter.test(incident.operator) ||
+        matchesIncidentsFilter.test(incident.locationAirport)
+    );
     let incidentsSorted = [];
     let incidentsType = [];
     let incidentsFatal = [];
     let incidentsResults = [];
 
     if (this.incidentsFatalitiesChecked) {
-      incidentsFiltered.map( incident => {
+      incidentsFiltered.map(incident => {
         if (incident.fatalities > 0) {
           incidentsFatal.push(incident);
           return null;
@@ -201,13 +254,17 @@ class Store {
       incidentsFatal = incidentsFiltered;
     }
 
-    if (this.incidentsTypeValue === null || this.incidentsTypeValue === 'Select Incident Type') {
+    if (
+      this.incidentsTypeValue === null ||
+      this.incidentsTypeValue === 'Select Incident Type'
+    ) {
       incidentsType = incidentsFatal;
     } else {
       const theIncident = new RegExp(this.incidentsTypeValue);
-      incidentsType = incidentsFatal.filter(incident => incident.accidentType.match(theIncident));
+      incidentsType = incidentsFatal.filter(incident =>
+        incident.accidentType.match(theIncident)
+      );
     }
-
 
     if (this.incidentsNewerChecked === true) {
       incidentsSorted = incidentsType.reverse();
@@ -220,28 +277,29 @@ class Store {
     return incidentsResults;
   }
 
-  @action calculateGridData(theKey) {
+  @action
+  calculateGridData(theKey) {
     let theKeys = [];
     let p = theKey;
     // Get all the valuse into one array
-    if (theKey === "accidentType") {
+    if (theKey === 'accidentType') {
       this.incidentsData.slice().map(y => {
         return theKeys.push(y.accidentType);
       });
     } else {
       this.airplaneData.slice().map(x => {
-        if (theKey === "serial") {
-          var shortValue = x.serial.substring(0,2);
+        if (theKey === 'serial') {
+          var shortValue = x.serial.substring(0, 2);
           return theKeys.push(shortValue);
-        } else if (theKey === "latestCountry") {
-        if (x.latestCountry.charAt(0) === `(`) {
+        } else if (theKey === 'latestCountry') {
+          if (x.latestCountry.charAt(0) === `(`) {
             var noCountry = x.latestCountry.slice(1, -1);
             return theKeys.push(noCountry);
           } else {
             return theKeys.push(x.latestCountry);
           }
-        } else if (theKey === "latestOperator") {
-        if (x.latestOperator === "?") {
+        } else if (theKey === 'latestOperator') {
+          if (x.latestOperator === '?') {
             return null;
           } else if (x.latestOperator.charAt(0) === `(`) {
             var noOp = x.latestOperator.slice(1, -1);
@@ -249,16 +307,16 @@ class Store {
           } else {
             return theKeys.push(x.latestOperator);
           }
-        } else if (theKey === "airplaneProduction") {
-        if (x.factoryDate === "?") {
+        } else if (theKey === 'airplaneProduction') {
+          if (x.factoryDate === '?') {
             return null;
           } else {
-             var theYear = x.factoryDate.slice(-2);
-             if (theYear.charAt(0) === ("0" || "1")) {
-               theYear = "20" + theYear;
-             } else {
-               theYear = "19" + theYear;
-             }
+            var theYear = x.factoryDate.slice(-2);
+            if (theYear.charAt(0) === ('0' || '1')) {
+              theYear = '20' + theYear;
+            } else {
+              theYear = '19' + theYear;
+            }
             return theKeys.push(theYear);
           }
         } else {
@@ -273,23 +331,26 @@ class Store {
     let theList = {};
     let finalList = [];
 
-    theKeys.forEach(function(x) { theList[x] = (theList[x] || 0)+1; });
+    theKeys.forEach(function(x) {
+      theList[x] = (theList[x] || 0) + 1;
+    });
 
-    Object.keys(theList).forEach((key) => {
-      finalList.push({ name: key, count: theList[key]});
+    Object.keys(theList).forEach(key => {
+      finalList.push({ name: key, count: theList[key] });
     });
 
     //Sort the objects so from largest count to lowest
-    finalList.sort(function(a,b) {
+    finalList.sort(function(a, b) {
       return b.count - a.count;
     });
 
-    finalList = finalList.slice(0,10);
+    finalList = finalList.slice(0, 10);
 
     return finalList;
   }
 
-  @action resetSearch = () => {
+  @action
+  resetSearch = () => {
     this.airplaneFilter = '';
     this.countryValue = '';
     this.operatorValue = '';
@@ -305,15 +366,16 @@ class Store {
     this.destroyedChecked = false;
     this.newerChecked = false;
     this.olderChecked = true;
-  }
+  };
 
-  @action incidentsSearchReset = () => {
+  @action
+  incidentsSearchReset = () => {
     this.incidentsFilter = '';
     this.incidentsTypeValue = '';
     this.incidentsNewerChecked = false;
     this.incidentsOlderChecked = true;
     this.incidentsFatalitiesChecked = false;
-  }
+  };
 }
 
 export var storeData = new Store();

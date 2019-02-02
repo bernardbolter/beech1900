@@ -1,18 +1,18 @@
 import React from 'react';
-import { observer, inject} from 'mobx-react';
+import { observer, inject } from 'mobx-react';
 
 import './airplanes.sass';
 
 import Header from '../header/header';
 import AirplaneExcerpt from './airplane-excerpt.js';
 
-@inject('store', 'routing') @observer
+@inject('store', 'routing')
+@observer
 export default class Airplanes extends React.Component {
-
   render() {
     return (
       <section>
-      <Header match={this.props.match} history={this.props.history}/>
+        <Header match={this.props.match} history={this.props.history} />
         <div className="airplane-data">
           <section className="airplane-top-info">
             {this._airplaneCount()}
@@ -48,19 +48,20 @@ export default class Airplanes extends React.Component {
   _showAirplanes = () => {
     if (this.props.store.filteredAirplanes.length === 0) {
       return (
-        <div className='no-incident'>
-          <img src={`${process.env.PUBLIC_URL}/b1900-logo.png`} alt="BEECH 1900 Graphic" />
+        <div className="no-incident">
+          <img
+            src={`${process.env.PUBLIC_URL}/b1900-logo.png`}
+            alt="BEECH 1900 Graphic"
+          />
           <p>no airplanes were found in your search</p>
         </div>
-      )
+      );
     } else {
-      return (
-        this.props.store.filteredAirplanes.slice().map( plane => (
-            <AirplaneExcerpt key={plane.id} {...plane} />
-          ))
-      )
+      return this.props.store.filteredAirplanes
+        .slice()
+        .map(plane => <AirplaneExcerpt key={plane.id} {...plane} />);
     }
-  }
+  };
 
   _airplaneClass = () => {
     if (this.props.store.toggleMenu === true) {
@@ -70,13 +71,17 @@ export default class Airplanes extends React.Component {
     } else {
       return 'airplane-data-wrapper';
     }
-  }
+  };
 
   _airplaneCount = () => {
     if (this.props.store.filteredAirplanes.slice().length > 0) {
-      return <p>Viewing {this.props.store.filteredAirplanes.slice().length} Records</p>;
+      return (
+        <p>
+          Viewing {this.props.store.filteredAirplanes.slice().length} Records
+        </p>
+      );
     } else {
       return <p>There are no aiplane results for your search.</p>;
     }
-  }
+  };
 }

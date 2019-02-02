@@ -6,6 +6,6 @@ export default class AboutSearch extends React.Component {
       <div className="about-search">
         <h3>About</h3>
       </div>
-    )
+    );
   }
 }

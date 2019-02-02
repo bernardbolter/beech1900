@@ -11,9 +11,9 @@ import FactSearch from './search/factSearch';
 import AboutSearch from './search/aboutSearch';
 import Nav from './nav/nav';
 
-@inject('store', 'routing') @observer
+@inject('store', 'routing')
+@observer
 export default class Header extends React.Component {
-
   render() {
     return (
       <div className="header">
@@ -27,16 +27,16 @@ export default class Header extends React.Component {
   }
 
   displaySearch() {
-    if (this.props.match.path === "/incidents") {
+    if (this.props.match.path === '/incidents') {
       return <IncidentSearch />;
-    } else if (this.props.match.path === "/facts") {
+    } else if (this.props.match.path === '/facts') {
       return <FactSearch />;
-    } else if (this.props.match.path === "/about") {
+    } else if (this.props.match.path === '/about') {
       return <AboutSearch />;
     } else if (this.props.match.path === '/') {
       return <HomeSearch />;
     } else if (this.props.match.path === 'airplanes') {
-      return <AirplaneSearch history={this.props.history} />
+      return <AirplaneSearch history={this.props.history} />;
     } else {
       return <AirplaneSearch history={this.props.history} />;
     }

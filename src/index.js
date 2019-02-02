@@ -25,7 +25,7 @@ const routingStore = new RouterStore();
 const stores = {
   routing: routingStore,
   store: storeData
-}
+};
 
 const Root = () => {
   return (
