@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import 'normalize.css';
 
 import { storeData } from './store';
+import { incidentData } from './stores/incidentStore';
 
 import createBrowserHistory from 'history/createBrowserHistory';
 import { Provider } from 'mobx-react';
@@ -24,7 +25,8 @@ const routingStore = new RouterStore();
 
 const stores = {
   routing: routingStore,
-  store: storeData
+  store: storeData,
+  incidentStore: incidentData
 };
 
 const Root = () => {
